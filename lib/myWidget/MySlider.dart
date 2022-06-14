@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables
+// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'dart:async';
 
@@ -45,7 +45,15 @@ class _MySliderState extends State<MySlider> {
     super.dispose();
   }
 
-  var placeList = ['Epson', 'Tecnoware', 'Computer', 'Camera', 'K&F', 'Budget'];
+  var categoryList = [
+    'Epson',
+    'Tecnoware',
+    'Computer',
+    'Camera',
+    'K&F',
+    'Budget',
+    'Games'
+  ];
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,7 +64,7 @@ class _MySliderState extends State<MySlider> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: List.generate(
-                  placeList.length,
+                  categoryList.length,
                   (index) => GestureDetector(
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -75,7 +83,7 @@ class _MySliderState extends State<MySlider> {
                             Container(
                               margin: const EdgeInsets.only(left: 25),
                               child: Text(
-                                '${placeList[index]}',
+                                '${categoryList[index]}',
                                 style: TextStyle(
                                     fontWeight: pageNo == index
                                         ? FontWeight.bold
@@ -139,10 +147,11 @@ class _MySliderState extends State<MySlider> {
                                           children: [
                                             Text(
                                               // 'Camera',
-                                              '${placeList[index]}',
+                                              '${categoryList[index]}',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 20),
+                                                  fontSize: 20,
+                                                  color: Colors.white),
                                             ),
                                           ],
                                         ),
@@ -150,17 +159,19 @@ class _MySliderState extends State<MySlider> {
                                     ),
                                     alignment: Alignment.bottomLeft),
                                 decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    //color: Color(0xff025c1f),
+                                    color: Color(0XFF16a085),
                                     borderRadius: BorderRadius.circular(24)),
                               ),
                               Container(
                                 margin: const EdgeInsets.all(8),
+                                //padding: EdgeInsets.all(8),
                                 //height image
                                 height: 180,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(24),
                                   image: DecorationImage(
-                                    fit: BoxFit.contain,
+                                    fit: BoxFit.fill,
                                     image: AssetImage(
                                       'assets/images/category${index + 1}.png',
                                     ),
@@ -184,9 +195,9 @@ class _MySliderState extends State<MySlider> {
                                     color: Colors.white.withOpacity(0.7),
                                     borderRadius: BorderRadius.circular(25),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: const Icon(
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(
                                       Icons.favorite,
                                       size: 25,
                                       color: Colors.red,
@@ -201,7 +212,7 @@ class _MySliderState extends State<MySlider> {
                     ),
                   );
                 },
-                itemCount: placeList.length,
+                itemCount: categoryList.length,
               ),
             ),
           )

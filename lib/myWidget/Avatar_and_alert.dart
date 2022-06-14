@@ -27,12 +27,12 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
                 )),
           ),
           Container(
-            child: Text(
+            child: const Text(
               'Tina Shop',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
-                  color: const Color(0xff025c1f)),
+                  color: Color(0xff025c1f)),
             ),
           ),
           Stack(
