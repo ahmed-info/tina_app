@@ -1,7 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:tina/myHome.dart';
+// ignore_for_file: prefer_const_constructors
 
-void main() {
+import 'package:flutter/material.dart';
+import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/localization/changelocal.dart';
+import 'package:tina/core/localization/translation.dart';
+import 'package:tina/core/services/services.dart';
+import 'package:tina/routes.dart';
+//import 'package:tina/view/screens/categoryDetails.dart';
+//import 'package:tina/view/screens/myHome.dart';
+import 'package:get/get.dart';
+import 'package:tina/view/screens/language.dart';
+//import 'package:tina/view/screens/onboarding.dart';
+
+//import 'dart:ui';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initialServices();
   runApp(const MyApp());
 }
 
@@ -10,13 +24,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    LocaleController controller = Get.put(LocaleController());
+    return GetMaterialApp(
+      translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Tina Shop',
+      locale: controller.language,
       theme: ThemeData(
+        fontFamily: "PlayfairDisplay",
+        textTheme: TextTheme(
+          headline1: const TextStyle(
+              fontSize: 20, color: AppColor.black, fontWeight: FontWeight.bold),
+          bodyText1: const TextStyle(
+              height: 2,
+              color: AppColor.grey,
+              fontWeight: FontWeight.bold,
+              fontSize: 17),
+        ),
         primarySwatch: Colors.green,
       ),
-      home: MyHome(),
+      //home: MyHome(),
+      //home: OnBoarding(),
+      home: Language(),
+      initialRoute: '/',
+      routes: routes,
+      //CategoryDetails.screenRoute: (ctx) => CategoryDetails(),
     );
   }
 }

@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables
+// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables, file_names, avoid_unnecessary_containers, prefer_const_constructors_in_immutables, non_constant_identifier_names
 
 import 'dart:async';
 
@@ -82,7 +82,7 @@ class _PartnersState extends State<Partners> {
                     ),
                   )).toList(),
         ),
-        SizedBox(
+        const SizedBox(
           height: 2,
         ),
         Padding(
@@ -144,7 +144,7 @@ class _PartnersState extends State<Partners> {
                           children: [
                             Text(
                               '${mylist[index]}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 14),
                             ),
                           ],

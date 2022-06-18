@@ -1,12 +1,14 @@
+// ignore_for_file: file_names, prefer_const_constructors_in_immutables
+
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:tina/myWidget/Avatar_and_alert.dart';
-import 'package:tina/myWidget/BigText.dart';
-import 'package:tina/myWidget/MySlider.dart';
-import 'package:tina/myWidget/Partners.dart';
-import 'package:tina/myWidget/Text_searchBar.dart';
-import 'package:tina/screens/categories.dart';
-import 'package:tina/screens/contactUs.dart';
+import 'package:tina/view/myWidget/Avatar_and_alert.dart';
+import 'package:tina/view/myWidget/BigText.dart';
+import 'package:tina/view/myWidget/MySlider.dart';
+import 'package:tina/view/myWidget/Partners.dart';
+import 'package:tina/view/myWidget/Text_searchBar.dart';
+import 'package:tina/view/screens/categories.dart';
+import 'package:tina/view/screens/contactUs.dart';
 
 class MyHome extends StatefulWidget {
   MyHome({Key? key}) : super(key: key);
@@ -23,7 +25,10 @@ class _MyHomeState extends State<MyHome> {
         children: [
           AvatarAndAlert(),
           TextSearchBar(),
-          MySlider(),
+          MySlider(
+            values: "vvvv",
+            ind: 1,
+          ),
           BigText(text: 'Featured Partners'),
           Partners()
         ],
@@ -32,7 +37,7 @@ class _MyHomeState extends State<MyHome> {
     Categories(),
     ContactUs(),
     Padding(
-      padding: EdgeInsets.only(left: 30, right: 30),
+      padding: const EdgeInsets.only(left: 30, right: 30),
       child: Container(
         color: Colors.redAccent,
       ),
@@ -42,13 +47,13 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
+        drawer: const Drawer(),
         // appBar: AppBar(
         //   actions: [AvatarAndAlert()],
         // ),
         body: listOfTabs[currentIndex],
         bottomNavigationBar: BottomNavyBar(
-          animationDuration: Duration(microseconds: 2000),
+          animationDuration: const Duration(microseconds: 2000),
           backgroundColor: Colors.grey.shade200,
           curve: Curves.easeInOutCirc,
           selectedIndex: currentIndex,
@@ -59,19 +64,19 @@ class _MyHomeState extends State<MyHome> {
           },
           items: [
             BottomNavyBarItem(
-                icon: Icon(Icons.home),
-                title: Text('Home'),
-                activeColor: Color(0XFF16a085),
+                icon: const Icon(Icons.home),
+                title: const Text('Home'),
+                activeColor: const Color(0XFF16a085),
                 inactiveColor: Colors.black),
             BottomNavyBarItem(
-                icon: Icon(Icons.category),
-                title: Text('Category'),
-                activeColor: Color(0XFF16a085),
+                icon: const Icon(Icons.category),
+                title: const Text('Category'),
+                activeColor: const Color(0XFF16a085),
                 inactiveColor: Colors.black),
             BottomNavyBarItem(
-                icon: Icon(Icons.phone),
-                title: Text('Contact Us'),
-                activeColor: Color(0XFF16a085),
+                icon: const Icon(Icons.phone),
+                title: const Text('Contact Us'),
+                activeColor: const Color(0XFF16a085),
                 inactiveColor: Colors.black),
           ],
         ),

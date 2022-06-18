@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: must_be_immutable, file_names, prefer_const_constructors
+
+import 'package:flutter/material.dart' show BuildContext, Color, EdgeInsets, FontWeight, Key, MainAxisAlignment, Padding, Row, StatelessWidget, Text, TextAlign, TextStyle, Widget;
 
 class BigText extends StatelessWidget {
   final String text;

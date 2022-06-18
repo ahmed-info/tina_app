@@ -18,7 +18,7 @@ class RoundedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 30),
+      margin: const EdgeInsets.only(top: 30),
       child: Material(
         elevation: 3,
         color: colorBtn,
@@ -42,7 +42,7 @@ class RoundedButton extends StatelessWidget {
                     fontSize: 20,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 Icon(iconBtn, color: Colors.white)

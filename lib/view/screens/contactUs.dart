@@ -1,5 +1,7 @@
+// ignore_for_file: file_names, avoid_unnecessary_containers, prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
-import 'package:tina/myWidget/rounded_button.dart';
+import 'package:tina/view/myWidget/rounded_button.dart';
 //import 'package:open_whatsapp/open_whatsapp.dart';
 //import 'package:messenger_launcher/messenger_launcher.dart';
 
@@ -22,7 +24,7 @@ class _ContactUsState extends State<ContactUs> {
             RoundedButton(
                 btnText: "واتساب",
                 colorText: Colors.white,
-                colorBtn: Color(0xff26b53d),
+                colorBtn: const Color(0xff26b53d),
                 iconBtn: Icons.whatsapp,
                 onBtnPressed: () {
                   // FlutterOpenWhatsapp.sendSingleMessage(
@@ -37,13 +39,13 @@ class _ContactUsState extends State<ContactUs> {
             RoundedButton(
                 btnText: "فيسبوك",
                 colorText: Colors.white,
-                colorBtn: Color(0xff000dff),
+                colorBtn: const Color(0xff000dff),
                 iconBtn: Icons.facebook,
                 onBtnPressed: () {}),
             RoundedButton(
                 btnText: "تيليكرام",
                 colorText: Colors.white,
-                colorBtn: Color(0xff039be4),
+                colorBtn: const Color(0xff039be4),
                 iconBtn: Icons.telegram,
                 onBtnPressed: () {}),
             RoundedButton(
