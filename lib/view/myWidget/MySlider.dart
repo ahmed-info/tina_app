@@ -53,7 +53,7 @@ class _MySliderState extends State<MySlider> {
     super.dispose();
   }
 
-  var categoryList = [
+  var  categoryList = [
     'Epson',
     'Tecnoware',
     'Computer',

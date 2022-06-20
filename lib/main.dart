@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/appColor.dart';
@@ -6,11 +6,13 @@ import 'package:tina/core/localization/changelocal.dart';
 import 'package:tina/core/localization/translation.dart';
 import 'package:tina/core/services/services.dart';
 import 'package:tina/routes.dart';
-//import 'package:tina/view/screens/categoryDetails.dart';
-//import 'package:tina/view/screens/myHome.dart';
+import 'package:tina/view/screens/myHome.dart';
 import 'package:get/get.dart';
-import 'package:tina/view/screens/language.dart';
-//import 'package:tina/view/screens/onboarding.dart';
+
+//import 'package:tina/view/screens/auth/login.dart';
+//import 'package:tina/view/screens/categoryDetails.dart';
+//import 'package:tina/view/screens/language.dart';
+import 'package:tina/view/screens/onboarding.dart';
 
 //import 'dart:ui';
 void main() async {
@@ -35,17 +37,22 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           headline1: const TextStyle(
               fontSize: 20, color: AppColor.black, fontWeight: FontWeight.bold),
+          headline2: const TextStyle(
+              fontSize: 26, color: AppColor.black, fontWeight: FontWeight.bold),
+          headline3: const TextStyle(
+              fontSize: 12, color: AppColor.black, fontWeight: FontWeight.bold),
           bodyText1: const TextStyle(
               height: 2,
               color: AppColor.grey,
               fontWeight: FontWeight.bold,
               fontSize: 17),
         ),
-        primarySwatch: Colors.green,
+        //primarySwatch: AppColor.materialColorPrimary,
       ),
       //home: MyHome(),
-      //home: OnBoarding(),
-      home: Language(),
+      home: OnBoarding(),
+      //home: Language(),
+      //home: Login(),
       initialRoute: '/',
       routes: routes,
       //CategoryDetails.screenRoute: (ctx) => CategoryDetails(),

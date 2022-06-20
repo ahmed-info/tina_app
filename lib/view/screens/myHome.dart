@@ -2,6 +2,7 @@
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:tina/core/constant/appColor.dart';
 import 'package:tina/view/myWidget/Avatar_and_alert.dart';
 import 'package:tina/view/myWidget/BigText.dart';
 import 'package:tina/view/myWidget/MySlider.dart';
@@ -23,8 +24,10 @@ class _MyHomeState extends State<MyHome> {
     SingleChildScrollView(
       child: Column(
         children: [
-          AvatarAndAlert(),
-          TextSearchBar(),
+          Padding(
+            padding: const EdgeInsets.only(top: 15),
+            child: TextSearchBar(),
+          ),
           MySlider(
             values: "vvvv",
             ind: 1,
@@ -36,21 +39,29 @@ class _MyHomeState extends State<MyHome> {
     ),
     Categories(),
     ContactUs(),
-    Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30),
-      child: Container(
-        color: Colors.redAccent,
-      ),
-    ),
+    // Padding(
+    //   padding: const EdgeInsets.only(left: 30, right: 30),
+    //   child: Container(
+    //     color: Colors.redAccent,
+    //   ),
+    // ),
   ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         drawer: const Drawer(),
-        // appBar: AppBar(
-        //   actions: [AvatarAndAlert()],
-        // ),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          foregroundColor: AppColor.secondaryColor,
+          centerTitle: true,
+          actions: [
+            AvatarAndAlert(),
+          ],
+          //backgroundColor: Colors.red,
+          elevation: 0.0,
+          //title: Text('Sign In', style: Theme.of(context).textTheme.headline1),
+        ),
         body: listOfTabs[currentIndex],
         bottomNavigationBar: BottomNavyBar(
           animationDuration: const Duration(microseconds: 2000),
