@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, file_names, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/appRoute.dart';
 
 class AvatarAndAlert extends StatefulWidget {
   AvatarAndAlert({Key? key}) : super(key: key);
@@ -51,7 +53,7 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
               children: [
                 InkWell(
                   onTap: () {
-                    //Navigator.of(context).pop();
+                    Get.toNamed(AappRoute.mynotifcation);
                   },
                   child: const Icon(
                     Icons.notifications_none,

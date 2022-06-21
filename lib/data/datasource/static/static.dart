@@ -42,7 +42,7 @@ List<String> categoryList = [
   'Games'
 ];
 
-List<CustomCategoryItem> categoryItemList = [
+List<CustomCategoryItem> subCategoryEpsonList = [
   const CustomCategoryItem(
     categoryImgItem: AppImgAsset.ink,
     categoryNameItem: "Ink",
@@ -70,5 +70,107 @@ List<CustomCategoryItem> categoryItemList = [
   const CustomCategoryItem(
     categoryImgItem: AppImgAsset.dotMatrix,
     categoryNameItem: "Dot-Matrix Printer",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryTechnowareList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsDC,
+    categoryNameItem: "UPS-DC",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsLineInteractive,
+    categoryNameItem: "UPS Line Interactive",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsLineInteractiveSinewave,
+    categoryNameItem: "UPS Line Interactive Sinewave",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsSinglePhaseOnline,
+    categoryNameItem: "UPS Single Phase Online",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsThreePhaseOnline,
+    categoryNameItem: "UPS Three Phase Online",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.stablizers,
+    categoryNameItem: "Stablizers",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.batteries,
+    categoryNameItem: "Batteries",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.upsAccessories,
+    categoryNameItem: "UPS Accessories",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryComputerList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.labtop,
+    categoryNameItem: "Labtop",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.pcComponents,
+    categoryNameItem: "PC Components",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.system,
+    categoryNameItem: "System",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryCameraList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.labtop,
+    categoryNameItem: "Labtop",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.pcComponents,
+    categoryNameItem: "PC Components",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.system,
+    categoryNameItem: "System",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryKAndFList = [
+   const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.backPack,
+    categoryNameItem: "BackPack",
+  ),
+   const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.reflectors,
+    categoryNameItem: "Reflectors",
+  ),
+   const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.microphone,
+    categoryNameItem: "Microphone",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryBudgetList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.tableDesc,
+    categoryNameItem: "Table Descktop",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.chair,
+    categoryNameItem: "Chair",
+  ),
+];
+
+List<CustomCategoryItem> subCategoryGamesList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.tableDesc,
+    categoryNameItem: "Table Descktop",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.chair,
+    categoryNameItem: "Chair",
   ),
 ];

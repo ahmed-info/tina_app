@@ -24,4 +24,35 @@ class AppImgAsset {
   static const String pos = "$rootImages/pos.jpg";
   static const String colourLabelPrinter = "$rootImages/colourLabelPrinter.png";
   static const String dotMatrix = "$rootImages/dotMatrix.png";
+
+  //sub category technoware
+  static const String upsDC = "$rootImages/upsdc.png";
+  static const String upsLineInteractive =
+      "$rootImages/ups-line-interactive.png";
+  static const String upsLineInteractiveSinewave =
+      "$rootImages/ups-line-interactive-sinewave.png";
+  static const String upsSinglePhaseOnline = "$rootImages/single-phase.jpg";
+  static const String upsThreePhaseOnline =
+      "$rootImages/ups-three-phase-online.jpg";
+  static const String stablizers = "$rootImages/stablizers.jpg";
+  static const String batteries = "$rootImages/batteries.jpg";
+  static const String upsAccessories = "$rootImages/ups-accessories.png";
+
+  //sub category computer
+  static const String labtop = "$rootImages/labtop.png";
+  static const String pcComponents = "$rootImages/pc-components.png";
+  static const String system = "$rootImages/system.png";
+
+  //sub category Camera
+
+  //sub category k&f
+  static const String backPack = "$rootImages/backPack.png";
+  static const String microphone = "$rootImages/microphone.png";
+  static const String reflectors = "$rootImages/reflectors.jpg";
+
+  //subCategory Budget
+  static const String tableDesc = "$rootImages/tableDesc.png";
+  static const String chair = "$rootImages/chair.png";
+  //subCategory games
+
 }

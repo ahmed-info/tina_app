@@ -65,7 +65,7 @@ class _MyHomeState extends State<MyHome> {
         body: listOfTabs[currentIndex],
         bottomNavigationBar: BottomNavyBar(
           animationDuration: const Duration(microseconds: 2000),
-          backgroundColor: Colors.grey.shade200,
+          backgroundColor: Colors.white,
           curve: Curves.easeInOutCirc,
           selectedIndex: currentIndex,
           onItemSelected: (index) {

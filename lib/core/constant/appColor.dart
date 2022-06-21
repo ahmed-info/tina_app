@@ -7,8 +7,4 @@ class AppColor {
   static const Color black = Colors.black;
   static const Color primaryColor = Color(0XFF16a085);
   static const Color secondaryColor = Color(0xff025c1f);
-  static const MaterialColor materialColorPrimary =
-      MaterialColor(0XFF16a085, <int, Color>{
-    500: Color(0xff5c261d),
-  });
 }

@@ -19,12 +19,12 @@ class CustomCategoryItem extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.yellow,
+        //color: Colors.yellow,
         image: DecorationImage(
             image: AssetImage(categoryImgItem), fit: BoxFit.cover),
       ),
       child:
-          Text(categoryNameItem, style: Theme.of(context).textTheme.headline1),
+          Text(categoryNameItem, style: Theme.of(context).textTheme.headline3),
     );
   }
 }

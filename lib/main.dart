@@ -32,7 +32,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Tina Shop',
       locale: controller.language,
+
       theme: ThemeData(
+        backgroundColor: AppColor.black,
         fontFamily: "PlayfairDisplay",
         textTheme: TextTheme(
           headline1: const TextStyle(
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 17),
         ),
-        //primarySwatch: AppColor.materialColorPrimary,
+        //primarySwatch: Colors.black,
       ),
       //home: MyHome(),
       home: OnBoarding(),

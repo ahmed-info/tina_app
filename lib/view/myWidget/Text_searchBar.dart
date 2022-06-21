@@ -1,6 +1,8 @@
 // ignore_for_file: file_names, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:tina/core/constant/appRoute.dart';
 
 class TextSearchBar extends StatefulWidget {
   @override
@@ -57,7 +59,9 @@ class _TextSearchBarState extends State<TextSearchBar> {
               borderOnForeground: true,
               child: MaterialButton(
                 padding: const EdgeInsets.only(right: 5, left: 5),
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(AappRoute.search);
+                },
                 minWidth: 5,
                 height: 20,
                 child: const Icon(

@@ -6,6 +6,7 @@ import 'package:tina/core/constant/imgAsset.dart';
 import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/category/customMainCategory.dart';
+import 'package:tina/view/myWidget/category/groupSubCategory.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key? key}) : super(key: key);
@@ -15,55 +16,21 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List _colors = [
-    Container(
-      height: 200,
-      width: 200,
-      //margin: EdgeInsets.only(bottom: 150),
-      child: SingleChildScrollView(
-          child: Container(
-        width: 200,
-        height: 900,
-        child: GridView(
-          padding: EdgeInsets.all(10),
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 7 / 8,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10),
-          children: categoryItemList
-              .map((e) => CustomCategoryItem(
-                    categoryImgItem: e.categoryImgItem,
-                    categoryNameItem: e.categoryNameItem,
-                  ))
-              .toList(),
-        ),
-      )),
-    ),
-    //Colors.redAccent,
-    Container(
-      child: Center(child: Text('Technoware')),
-    ),
-    Container(
-      child: Center(child: Text('Computer')),
-    ),
+  List _allGroupSubCategory = [
+    GroupSubCategory(listOfSubCategory: subCategoryEpsonList),
+    GroupSubCategory(listOfSubCategory: subCategoryTechnowareList),
+    GroupSubCategory(listOfSubCategory: subCategoryComputerList),
     Container(
       child: Center(child: Text('Camera')),
     ),
-    Container(
-      child: Center(child: Text('K&F')),
-    ),
-    Container(
-      child: Center(child: Text('Budget')),
-    ),
-    Container(
-      child: Center(child: Text('Games')),
-    ),
+    GroupSubCategory(listOfSubCategory: subCategoryKAndFList),
+    GroupSubCategory(listOfSubCategory: subCategoryBudgetList),
+    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
   ];
   PageController? pageController;
   @override
   void initState() {
-    pageController = new PageController(initialPage: 0, viewportFraction: 0.85);
+    pageController = new PageController(initialPage: 0, viewportFraction: 0.95);
     super.initState();
   }
 
@@ -153,10 +120,10 @@ class _CategoriesState extends State<Categories> {
                   physics: BouncingScrollPhysics(),
                   //pageSnapping: false,
                   reverse: false,
-                  itemCount: _colors.length,
+                  itemCount: _allGroupSubCategory.length,
                   itemBuilder: (BuildContext ctx, int index) {
                     return Container(
-                      child: _colors[index],
+                      child: _allGroupSubCategory[index],
                     );
                   },
                   controller: pageController,
