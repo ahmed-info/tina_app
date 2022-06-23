@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/appColor.dart';
 class Search extends StatelessWidget {

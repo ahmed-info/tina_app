@@ -1,29 +1,30 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, unused_import
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, file_names, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/auth/loginController.dart';
 import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextBodyAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextFormAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextSign.dart';
 import 'package:tina/view/myWidget/auth/customTextTitleAuth.dart';
 import 'package:tina/view/myWidget/auth/logoAuth.dart';
+import 'package:tina/controller/auth/signInController.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    LoginControllerImp controller = Get.put(LoginControllerImp());
+    //SignupControllerImp controller = Get.put(Sign);
+    SignInControllerImp controller = Get.put(SignInControllerImp());
+
     return Scaffold(
       //drawer: Drawer(),
       appBar: AppBar(
         foregroundColor: AppColor.primaryColor,
         centerTitle: true,
-        title: Text('Sign In',
+        title: Text('Sign Up',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
@@ -35,20 +36,29 @@ class Login extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
         child: ListView(
           children: [
-            LogoAuth(),
             CustomTextTitleAuth(text: "Welcome Back"),
             SizedBox(height: 10),
             CustomTextBodyAuth(
                 text:
-                    'Sign In With Your Email And Password OR Continue With Social Media'),
+                    'Sign Up With Your Email And Password OR Continue With Social Media'),
             SizedBox(
               height: 15,
             ),
+            CustomTextFormAuth(
+                myController: controller.username,
+                hinttext: "Enter Your Username",
+                icontext: "Username",
+                iconData: Icons.person_outline),
             CustomTextFormAuth(
                 myController: controller.email,
                 hinttext: "Enter Your Email",
                 icontext: "Email",
                 iconData: Icons.email_outlined),
+            CustomTextFormAuth(
+                myController: controller.phone,
+                hinttext: "Enter Your Phone",
+                icontext: "Phone",
+                iconData: Icons.phone_outlined),
             CustomTextFormAuth(
                 myController: controller.password,
                 hinttext: "Enter Your Password",
@@ -59,19 +69,19 @@ class Login extends StatelessWidget {
               textAlign: TextAlign.end,
             ),
             CustomButtonAuth(
-              text: "Sign In",
+              text: "Sign Up",
               onPressed: () {},
             ),
             SizedBox(
               height: 30,
             ),
+            //////////test/////////////
             CustomTextSign(
-              textOne: "Dont have an account ? ",
-              textTwo: "SignUp",
-              onTap: () {
-                controller.goToSignUp();
-              },
-            )
+                textOne: " Hava an account ",
+                textTwo: "Sign In",
+                onTap: () {
+                  controller.goToSignIn();
+                }),
           ],
         ),
       ),

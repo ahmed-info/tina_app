@@ -1,4 +1,5 @@
 import 'package:tina/core/constant/imgAsset.dart';
+
 import 'package:tina/data/model/onBoardingModel.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
@@ -22,14 +23,14 @@ List<OnBoardingModel> onBoardingList = [
 ];
 
 List<SubCategoryModel> subCategoryList = [
-  SubCategoryModel(title: "Ink", imgUrl: AppImgAsset.ink),
-  SubCategoryModel(title: "Inkjet Printer", imgUrl: AppImgAsset.inkjet),
   SubCategoryModel(title: "Projectors", imgUrl: AppImgAsset.projector),
   SubCategoryModel(title: "Scanners", imgUrl: AppImgAsset.scanner),
   SubCategoryModel(title: "POS", imgUrl: AppImgAsset.pos),
   SubCategoryModel(
       title: "Colour Label Printers", imgUrl: AppImgAsset.colourLabelPrinter),
   SubCategoryModel(title: "Dot-Matrex Printers", imgUrl: AppImgAsset.dotMatrix),
+  SubCategoryModel(title: "Ink", imgUrl: AppImgAsset.ink),
+  SubCategoryModel(title: "Inkjet Printer", imgUrl: AppImgAsset.inkjet),
 ];
 
 List<String> categoryList = [
@@ -43,14 +44,6 @@ List<String> categoryList = [
 ];
 
 List<CustomCategoryItem> subCategoryEpsonList = [
-  const CustomCategoryItem(
-    categoryImgItem: AppImgAsset.ink,
-    categoryNameItem: "Ink",
-  ),
-  const CustomCategoryItem(
-    categoryImgItem: AppImgAsset.inkjet,
-    categoryNameItem: "Inkjet",
-  ),
   const CustomCategoryItem(
     categoryImgItem: AppImgAsset.projector,
     categoryNameItem: "Projector",
@@ -70,6 +63,14 @@ List<CustomCategoryItem> subCategoryEpsonList = [
   const CustomCategoryItem(
     categoryImgItem: AppImgAsset.dotMatrix,
     categoryNameItem: "Dot-Matrix Printer",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.ink,
+    categoryNameItem: "Ink",
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.inkjet,
+    categoryNameItem: "Inkjet",
   ),
 ];
 
@@ -125,29 +126,21 @@ List<CustomCategoryItem> subCategoryComputerList = [
 
 List<CustomCategoryItem> subCategoryCameraList = [
   const CustomCategoryItem(
-    categoryImgItem: AppImgAsset.labtop,
-    categoryNameItem: "Labtop",
-  ),
-  const CustomCategoryItem(
-    categoryImgItem: AppImgAsset.pcComponents,
-    categoryNameItem: "PC Components",
-  ),
-  const CustomCategoryItem(
-    categoryImgItem: AppImgAsset.system,
-    categoryNameItem: "System",
+    categoryImgItem: AppImgAsset.camera,
+    categoryNameItem: "Camera",
   ),
 ];
 
 List<CustomCategoryItem> subCategoryKAndFList = [
-   const CustomCategoryItem(
+  const CustomCategoryItem(
     categoryImgItem: AppImgAsset.backPack,
     categoryNameItem: "BackPack",
   ),
-   const CustomCategoryItem(
+  const CustomCategoryItem(
     categoryImgItem: AppImgAsset.reflectors,
     categoryNameItem: "Reflectors",
   ),
-   const CustomCategoryItem(
+  const CustomCategoryItem(
     categoryImgItem: AppImgAsset.microphone,
     categoryNameItem: "Microphone",
   ),

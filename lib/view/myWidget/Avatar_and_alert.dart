@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, file_names, avoid_unnecessary_containers
+// ignore_for_file: file_names, prefer_const_constructors_in_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -49,6 +49,7 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
           // ),
           Container(
             padding: const EdgeInsets.only(left: 30),
+            margin: const EdgeInsets.only(bottom: 12),
             child: Stack(
               children: [
                 InkWell(
@@ -62,7 +63,7 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 5, left: 15),
+                  margin: const EdgeInsets.only(top: 0, left: 15),
                   padding: const EdgeInsets.only(bottom: 0, top: 0),
                   height: 14,
                   width: 14,
@@ -70,19 +71,6 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Container(
-                    //padding: const EdgeInsets.only(bottom: 5),
-                    //margin: EdgeInsets.all(5),
-                    alignment: Alignment.topCenter,
-                    child: const Text(
-                      '1',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 11,
-                      ),
-                    ),
                   ),
                 )
               ],

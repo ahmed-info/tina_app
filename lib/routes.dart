@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 //import 'package:path/path.dart';
 import 'package:tina/core/constant/appRoute.dart';
 import 'package:tina/view/screens/auth/login.dart';
+import 'package:tina/view/screens/auth/signUp.dart';
+import 'package:tina/view/screens/categoryDetails.dart';
 import 'package:tina/view/screens/myHome.dart';
 import 'package:tina/view/screens/notification.dart';
 import 'package:tina/view/screens/onboarding.dart';
@@ -9,8 +11,10 @@ import 'package:tina/view/screens/search.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   AappRoute.login: (context) => const Login(),
+  AappRoute.signUp: (context) => const SignUp(),
   AappRoute.home: (context) => MyHome(),
   AappRoute.onBoarding: (context) => const OnBoarding(),
   AappRoute.mynotifcation: (context) => const MyNotification(),
   AappRoute.search: (context) => const Search(),
+  AappRoute.categoryDetails: (context) => CategoryDetails(),
 };

@@ -14,6 +14,7 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
       height: 40,
       margin: const EdgeInsets.only(bottom: 30),
       child: MaterialButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         padding: const EdgeInsets.symmetric(horizontal: 100),
         onPressed: () {
           controller.next();

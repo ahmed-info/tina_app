@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, file_names, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:tina/core/constant/appColor.dart';
 
 class CategoryDetails extends StatefulWidget {
   static const String screenRoute = '/category-details';
@@ -18,6 +19,11 @@ class _CategoryDetailsState extends State<CategoryDetails> {
     return Container(
       color: Colors.green,
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          foregroundColor: AppColor.primaryColor,
+          elevation: 0.0,
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

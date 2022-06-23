@@ -8,6 +8,7 @@ import 'package:tina/view/myWidget/BigText.dart';
 import 'package:tina/view/myWidget/MySlider.dart';
 import 'package:tina/view/myWidget/Partners.dart';
 import 'package:tina/view/myWidget/Text_searchBar.dart';
+import 'package:tina/view/screens/AppDrawer.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/contactUs.dart';
 
@@ -50,7 +51,7 @@ class _MyHomeState extends State<MyHome> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
+        drawer: const AppDrawer(),
         appBar: AppBar(
           backgroundColor: Colors.white,
           foregroundColor: AppColor.secondaryColor,

@@ -9,30 +9,42 @@ import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/category/groupSubCategory.dart';
 
 class Categories extends StatefulWidget {
-  Categories({Key? key}) : super(key: key);
+  final int? index;
+  Categories({Key? key, this.index}) : super(key: key);
 
   @override
   State<Categories> createState() => _CategoriesState();
 }
+
+int? myi = 0;
 
 class _CategoriesState extends State<Categories> {
   List _allGroupSubCategory = [
     GroupSubCategory(listOfSubCategory: subCategoryEpsonList),
     GroupSubCategory(listOfSubCategory: subCategoryTechnowareList),
     GroupSubCategory(listOfSubCategory: subCategoryComputerList),
-    Container(
-      child: Center(child: Text('Camera')),
-    ),
+    GroupSubCategory(listOfSubCategory: subCategoryCameraList),
     GroupSubCategory(listOfSubCategory: subCategoryKAndFList),
     GroupSubCategory(listOfSubCategory: subCategoryBudgetList),
     GroupSubCategory(listOfSubCategory: subCategoryGamesList),
   ];
+
   PageController? pageController;
   @override
   void initState() {
     pageController = new PageController(initialPage: 0, viewportFraction: 0.95);
     super.initState();
   }
+
+  List<String> _category = [
+    "Epson",
+    "Technoware",
+    "Computer",
+    "Camera",
+    "k&f",
+    "Budget",
+    "Games"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -50,58 +62,24 @@ class _CategoriesState extends State<Categories> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(0);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category1, categoryName: 'Epson'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(1);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category2,
-                      categoryName: 'Technoware'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(2);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category3, categoryName: 'Computer'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(3);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category4, categoryName: 'Camera'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(4);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category5, categoryName: 'K&F'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(5);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category6, categoryName: 'Budget'),
-                ),
-                InkWell(
-                  onTap: () {
-                    return pageController!.jumpToPage(6);
-                  },
-                  child: CustomMainCategory(
-                      imgUrl: AppImgAsset.category7, categoryName: 'Games'),
-                ),
-              ],
+              children: _category
+                  .asMap()
+                  .map((i, element) => MapEntry(
+                        i,
+                        InkWell(
+                          onTap: () {
+                            setState(() {
+                              myi = i;
+                            });
+                            return pageController!.jumpToPage(i);
+                          },
+                          child: CustomMainCategory(
+                              imgUrl: 'assets/images/category${i + 1}.png',
+                              categoryName: _category[i]),
+                        ),
+                      ))
+                  .values
+                  .toList(),
             ),
           ),
         ),
@@ -109,6 +87,23 @@ class _CategoriesState extends State<Categories> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
+              Container(
+                margin: EdgeInsets.only(left: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AppColor.primaryColor,
+                ),
+                height: 50,
+                width: 250,
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text(
+                    _category[myi!],
+                    //textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
               Container(
                 //margin: EdgeInsets.only(bottom: 150),
                 width: 250,

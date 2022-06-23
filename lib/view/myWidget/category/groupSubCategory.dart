@@ -1,5 +1,7 @@
+// ignore_for_file: file_names, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
-import 'package:tina/data/datasource/static/static.dart';
+//import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 
 class GroupSubCategory extends StatelessWidget {
@@ -19,8 +21,8 @@ class GroupSubCategory extends StatelessWidget {
         width: 200,
         height: 900,
         child: GridView(
-          padding: EdgeInsets.all(10),
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          padding: const EdgeInsets.all(10),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200,
               childAspectRatio: 7 / 8,
               mainAxisSpacing: 10,

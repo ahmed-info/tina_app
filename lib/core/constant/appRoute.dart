@@ -2,8 +2,10 @@
 
 class AappRoute {
   static const String login = '/login';
+  static const String signUp = '/signUp';
   static const String home = '/home';
   static const String onBoarding = '/onboarding';
   static const String mynotifcation = '/mynotifcation';
   static const String search = '/search';
+  static const String categoryDetails = '/category-details';
 }
