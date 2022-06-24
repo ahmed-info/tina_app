@@ -6,6 +6,7 @@ import 'package:tina/core/localization/changelocal.dart';
 import 'package:tina/core/localization/translation.dart';
 import 'package:tina/core/services/services.dart';
 import 'package:tina/routes.dart';
+import 'package:tina/testPackage.dart';
 import 'package:tina/view/screens/myHome.dart';
 import 'package:get/get.dart';
 
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
       //home: OnBoarding(),
       //home: Language(),
       //home: Login(),
+      //home: TestPackage(),
       initialRoute: '/',
       routes: routes,
       //CategoryDetails.screenRoute: (ctx) => CategoryDetails(),

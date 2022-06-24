@@ -4,18 +4,20 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/appRoute.dart';
 
-abstract class SignInController extends GetxController {
+abstract class SignUpController extends GetxController {
   signUp();
   goToSignIn();
 }
 
-class SignInControllerImp extends SignInController {
+class SignUpControllerImp extends SignUpController {
   late TextEditingController username;
   late TextEditingController email;
   late TextEditingController phone;
   late TextEditingController password;
   @override
-  signUp() {}
+  signUp() {
+    Get.offNamed(AappRoute.checkEmail);
+  }
 
   @override
   goToSignIn() {

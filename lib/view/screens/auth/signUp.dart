@@ -9,7 +9,7 @@ import 'package:tina/view/myWidget/auth/customTextFormAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextSign.dart';
 import 'package:tina/view/myWidget/auth/customTextTitleAuth.dart';
 import 'package:tina/view/myWidget/auth/logoAuth.dart';
-import 'package:tina/controller/auth/signInController.dart';
+import 'package:tina/controller/auth/signUpController.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //SignupControllerImp controller = Get.put(Sign);
-    SignInControllerImp controller = Get.put(SignInControllerImp());
+    SignUpControllerImp controller = Get.put(SignUpControllerImp());
 
     return Scaffold(
       //drawer: Drawer(),
@@ -45,10 +45,11 @@ class SignUp extends StatelessWidget {
               height: 15,
             ),
             CustomTextFormAuth(
-                myController: controller.username,
-                hinttext: "Enter Your Username",
-                icontext: "Username",
-                iconData: Icons.person_outline),
+              myController: controller.username,
+              iconData: Icons.person_outline,
+              hinttext: "Username",
+              icontext: "Username",
+            ),
             CustomTextFormAuth(
                 myController: controller.email,
                 hinttext: "Enter Your Email",
@@ -64,13 +65,12 @@ class SignUp extends StatelessWidget {
                 hinttext: "Enter Your Password",
                 icontext: "Password",
                 iconData: Icons.lock_outline),
-            Text(
-              'Forget Password',
-              textAlign: TextAlign.end,
-            ),
+
             CustomButtonAuth(
               text: "Sign Up",
-              onPressed: () {},
+              onPressed: () {
+                controller.signUp();
+              },
             ),
             SizedBox(
               height: 30,

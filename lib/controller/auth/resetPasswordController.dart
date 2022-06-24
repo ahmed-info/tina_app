@@ -4,39 +4,34 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/appRoute.dart';
 
-abstract class LoginController extends GetxController {
-  login();
-  goToSignUp();
-  goToForgetPassword();
+abstract class ResetPasswordController extends GetxController {
+  resetPassword();
+  goToSuccessResetPassword();
 }
 
-class LoginControllerImp extends LoginController {
-  late TextEditingController email;
+class ResetPasswordControllerImp extends ResetPasswordController {
   late TextEditingController password;
-  @override
-  login() {}
+  late TextEditingController repassword;
 
   @override
-  goToSignUp() {
-    Get.toNamed(AappRoute.signUp);
+  resetPassword() {}
+
+  @override
+  goToSuccessResetPassword() {
+    Get.offNamed(AappRoute.sucessResetPassword);
   }
 
   @override
   void onInit() {
-    email = TextEditingController();
     password = TextEditingController();
+    repassword = TextEditingController();
     super.onInit();
   }
 
   @override
   void dispose() {
-    email.dispose();
     password.dispose();
+    repassword.dispose();
     super.dispose();
-  }
-
-  @override
-  goToForgetPassword() {
-    Get.toNamed(AappRoute.forgetPassword);
   }
 }
