@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, file_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/appRoute.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 
 class SuccessSignUp extends StatelessWidget {
@@ -32,7 +34,9 @@ class SuccessSignUp extends StatelessWidget {
               width: double.infinity,
               child: CustomButtonAuth(
                 text: 'Go To Login',
-                onPressed: () {},
+                onPressed: () {
+                  Get.offNamed(AappRoute.login);
+                },
               ),
             )
           ],

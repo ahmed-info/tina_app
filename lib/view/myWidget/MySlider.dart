@@ -19,7 +19,6 @@ class MySlider extends StatefulWidget {
 int i = 0;
 
 class _MySliderState extends State<MySlider> {
-
   late final PageController pageController;
   int pageNo = 0;
   Timer? carasuelTimer;
@@ -53,14 +52,14 @@ class _MySliderState extends State<MySlider> {
     super.dispose();
   }
 
-  var  categoryList = [
+  var categoryList = [
     'Epson',
     'Tecnoware',
     'Computer',
     'Camera',
     'K&F',
     'Budget',
-    'Games'
+    'Games',
   ];
   @override
   Widget build(BuildContext context) {
@@ -130,13 +129,14 @@ class _MySliderState extends State<MySlider> {
             child: SizedBox(
               height: 260,
               //Sliderssss
-              child: GestureDetector(
+              child: InkWell(
                 onTap: () {
-                  
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) => CategoryDetails(
-                          value: '${categoryList[i]}', index: i + 1),
+                        value: '${categoryList[i]}',
+                        index: i + 1,
+                      ),
                     ),
                   );
                 },
@@ -153,7 +153,7 @@ class _MySliderState extends State<MySlider> {
                       builder: (ctx, child) {
                         return child!;
                       },
-                      child: GestureDetector(
+                      child: InkWell(
                         child: Stack(
                           alignment: Alignment.topRight,
                           children: [

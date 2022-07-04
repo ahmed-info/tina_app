@@ -38,7 +38,10 @@ class _MyHomeState extends State<MyHome> {
         ],
       ),
     ),
-    Categories(),
+    Categories(
+      index: 0,
+      myName: "",
+    ),
     ContactUs(),
     // Padding(
     //   padding: const EdgeInsets.only(left: 30, right: 30),
@@ -52,6 +55,7 @@ class _MyHomeState extends State<MyHome> {
     return SafeArea(
       child: Scaffold(
         drawer: const AppDrawer(),
+        backgroundColor: Colors.grey.shade200,
         appBar: AppBar(
           backgroundColor: Colors.white,
           foregroundColor: AppColor.secondaryColor,

@@ -1,5 +1,13 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/data/datasource/static/static.dart';
+import 'package:tina/data/model/subCategoryModel.dart';
+import 'package:tina/view/myWidget/category/customCategoryItem.dart';
+import 'package:tina/view/screens/categories.dart';
+import 'package:tina/view/screens/product/Products.dart';
 import 'package:tina/view/screens/auth/checkEmail.dart';
 import 'package:tina/view/screens/auth/forgetPassword.dart';
 import 'package:tina/view/screens/auth/login.dart';
@@ -31,4 +39,9 @@ Map<String, Widget Function(BuildContext)> routes = {
   AappRoute.checkEmail: (context) => const CheckEmail(),
 //onboarding
   AappRoute.onBoarding: (context) => const OnBoarding(),
+  //product
+  AappRoute.products: (context) => Products(
+        num: 0,
+        productName: subCategoryList[indexProduct!].title,
+      ),
 };

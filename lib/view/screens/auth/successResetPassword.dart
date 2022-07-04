@@ -1,5 +1,9 @@
+// ignore_for_file: file_names, prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/appRoute.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 
 class SuccessResetPassword extends StatelessWidget {
@@ -30,7 +34,9 @@ class SuccessResetPassword extends StatelessWidget {
               width: double.infinity,
               child: CustomButtonAuth(
                 text: 'Go To Login',
-                onPressed: () {},
+                onPressed: () {
+                  Get.offNamed(AappRoute.login);
+                },
               ),
             )
           ],

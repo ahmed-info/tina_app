@@ -14,4 +14,5 @@ class AappRoute {
   static const String successSignUp = '/successSignUp';
   static const String sucessResetPassword = '/sucessResetPassword';
   static const String checkEmail = '/checkEmail';
+  static const String products = '/products';
 }

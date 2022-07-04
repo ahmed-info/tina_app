@@ -50,6 +50,7 @@ class Login extends StatelessWidget {
                 icontext: "Email",
                 iconData: Icons.email_outlined),
             CustomTextFormAuth(
+              obscureText: true,
               myController: controller.password,
               hinttext: "Enter Your Password",
               icontext: "Password",

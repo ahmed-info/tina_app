@@ -41,12 +41,14 @@ class ResetPassword extends StatelessWidget {
               height: 15,
             ),
             CustomTextFormAuth(
+              obscureText: true,
               myController: controller.password,
               hinttext: "Enter Your Password",
               icontext: "Password",
               iconData: Icons.lock_clock_outlined,
             ),
             CustomTextFormAuth(
+                obscureText: true,
                 myController: controller.repassword,
                 hinttext: "Re Enter Your Password",
                 icontext: "Re Password",

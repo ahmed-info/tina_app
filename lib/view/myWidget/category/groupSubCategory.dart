@@ -6,6 +6,7 @@ import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 
 class GroupSubCategory extends StatelessWidget {
   final List<CustomCategoryItem> listOfSubCategory;
+  //final int indexint;
   const GroupSubCategory({Key? key, required this.listOfSubCategory})
       : super(key: key);
 
@@ -29,6 +30,7 @@ class GroupSubCategory extends StatelessWidget {
               crossAxisSpacing: 10),
           children: listOfSubCategory
               .map((e) => CustomCategoryItem(
+                    num: e.num,
                     categoryImgItem: e.categoryImgItem,
                     categoryNameItem: e.categoryNameItem,
                   ))

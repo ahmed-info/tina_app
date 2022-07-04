@@ -1,7 +1,6 @@
 // ignore_for_file: file_names, constant_identifier_names
 
 class AppImgAsset {
-  
   static const String rootImages = "assets/images";
   static const String rootSubCategory = "assets/images/category/subCategory";
   //logo
@@ -62,4 +61,104 @@ class AppImgAsset {
   //subCategory Budget
   static const String tableDesc = "$rootImages/tableDesc.png";
   static const String chair = "$rootImages/chair.png";
+
+  //product ink
+  static const String ink103 = "$rootImages/ink103.jpg";
+  static const String inkBlackXXL = "$rootImages/inkBlackXXL.jpg";
+  static const String inkCyanXL = "$rootImages/inkCyanXL.jpg";
+
+  static const String ink20750CatridgeT02S2 =
+      "$rootImages/ink20750CatridgeT02S2.jpg";
+  static const String ink869CatridgeT9732 =
+      "$rootImages/ink869CatridgeT9732.jpg";
+  static const String inkT9741 = "$rootImages/inkt9741.jpg";
+  static const String ink869CatridgeT9743 =
+      "$rootImages/ink869CatridgeT9743.jpg";
+  static const String ink20600CatridgeT02Q1 =
+      "$rootImages/ink20600CatridgeT02Q1.jpg";
+  static const String ink20600CatridgeT02Q2 =
+      "$rootImages/ink20600CatridgeT02Q2.jpg";
+  static const String ink20600CatridgeT02Q3 =
+      "$rootImages/ink20600CatridgeT02Q3.jpg";
+  static const String ink20600CatridgeT02Q4 =
+      "$rootImages/ink20600CatridgeT02Q4.jpg";
+  static const String ink20750CatridgeT02S1 =
+      "$rootImages/ink20750CatridgeT02S1.jpg";
+  static const String ink20750CatridgeT02S3 =
+      "$rootImages/ink20750CatridgeT02S3.jpg";
+  static const String ink20750CatridgeT02S4 =
+      "$rootImages/ink20750CatridgeT02S4.jpg";
+  static const String ink5290CatridgeT9441 =
+      "$rootImages/ink5290CatridgeT9441.jpg";
+  static const String ink5290CatridgeT9442 =
+      "$rootImages/ink5290CatridgeT9442.jpg";
+  static const String ink5290CatridgeT9443 =
+      "$rootImages/ink5290CatridgeT9443.jpg";
+  static const String ink5290CatridgeT9444 =
+      "$rootImages/ink5290CatridgeT9444.jpg";
+  static const String ink579CatridgeT01C1 =
+      "$rootImages/ink579CatridgeT01C1.jpg";
+  static const String ink579CatridgeT01C2 =
+      "$rootImages/ink579CatridgeT01C2.jpg";
+  static const String ink579CatridgeT01C3 =
+      "$rootImages/ink579CatridgeT01C3.jpg";
+  static const String ink878CatridgeT05A1 =
+      "$rootImages/ink878CatridgeT05A1.jpg";
+  static const String ink878CatridgeT05A2 =
+      "$rootImages/ink878CatridgeT05A2.jpg";
+  static const String ink878CatridgeT05A3 =
+      "$rootImages/ink878CatridgeT05A3.jpg";
+  static const String inkMagenta = "$rootImages/inkMagenta.jpg";
+  static const String inkManitenanceBoxT06714 =
+      "$rootImages/inkManitenanceBoxT06714.jpg";
+  static const String inkT673Series = "$rootImages/inkT673Series.jpg";
+  static const String inkWFC20600 = "$rootImages/inkWFC20600.jpg";
+  static const String inkWFC21000 = "$rootImages/inkWFC21000.jpg";
+  static const String inkWFC869R = "$rootImages/inkWFC869R.jpg";
+  static const String inkWFC878R = "$rootImages/inkWFC878R.jpg";
+  static const String inkWFC879R = "$rootImages/inkWFC879R.jpg";
+  static const String inkT9742 = "$rootImages/inkt9742.jpg";
+  static const String inkT9744 = "$rootImages/inkt9744.jpg";
+
+  //inkjet printer
+  static const String wfc869r1 = "$rootImages/wf-c869r1.jpg";
+  static const String l1300 = "$rootImages/l1300.png";
+  static const String l1800 = "$rootImages/l1800.png";
+
+//projector
+  static const String projectorEBE01 = "$rootImages/projectorEB-E01.png";
+  static const String projectorEBFH06 = "$rootImages/projectorEB-FH06.jpg";
+  static const String projectorEBX06 = "$rootImages/projectorEB-X06.png";
+  static const String projectorEBX51 = "$rootImages/projectorEB-X51.png";
+  static const String projectorEHTW7100 = "$rootImages/projectorEHTW7100.png";
+  static const String projectorE10 = "$rootImages/projectorE10.png";
+
+//scanner
+  static const String scannerDs1630 = "$rootImages/scannerDs1630.jpg";
+  static const String scannerDS1660 = "$rootImages/scannerDS1660.png";
+  static const String scannerDS30000 = "$rootImages/scannerDS30000.png";
+  static const String scannerDS310 = "$rootImages/scannerDS310.png";
+  static const String scannerDS410 = "$rootImages/scannerDS410.jpg";
+  static const String scannerDS530 = "$rootImages/scannerDS530.jpg";
+  static const String scannerDS730 = "$rootImages/scannerDS730.png";
+  static const String scannerDS770 = "$rootImages/scannerDS770.png";
+  static const String scannerDS870 = "$rootImages/scannerDS870.png";
+  static const String scannerDS970 = "$rootImages/scannerDS970.png";
+  static const String scannerDS32000 = "$rootImages/scannerDS32000.png";
+
+//pos
+  static const String posEum30 = "$rootImages/posEum30.png";
+  static const String postmt20lll = "$rootImages/postm-t20lll.png";
+  static const String postmt88vl = "$rootImages/postmt88vl.png";
+  static const String postmu220 = "$rootImages/postmu220.png";
+
+//Color label Printer
+  static const String labelcwc6000 = "$rootImages/labelcw-c6000.png";
+  static const String labelcwc6500 = "$rootImages/labelcwc6500.png";
+
+// dot matrix printer
+  static const String dot24pinimpact = "$rootImages/dot24pinimpacat.jpg";
+  static const String dot9pinimpact = "$rootImages/dot9pinimpact.jpg";
+  static const String dotfx2190 = "$rootImages/dotfx2190.jpg";
+  static const String dotLQ2190 = "$rootImages/dotLQ2190.jpg";
 }

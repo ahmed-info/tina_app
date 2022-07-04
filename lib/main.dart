@@ -12,7 +12,7 @@ import 'package:get/get.dart';
 
 //import 'package:tina/view/screens/auth/login.dart';
 //import 'package:tina/view/screens/categoryDetails.dart';
-//import 'package:tina/view/screens/language.dart';
+import 'package:tina/view/screens/language.dart';
 import 'package:tina/view/screens/onboarding.dart';
 
 //import 'dart:ui';
@@ -30,12 +30,14 @@ class MyApp extends StatelessWidget {
     LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
       translations: MyTranslation(),
+      
       debugShowCheckedModeBanner: false,
       title: 'Tina Shop',
       locale: controller.language,
-
+      
       theme: ThemeData(
         backgroundColor: AppColor.black,
+        
         fontFamily: "PlayfairDisplay",
         textTheme: TextTheme(
           headline1: const TextStyle(
@@ -54,9 +56,9 @@ class MyApp extends StatelessWidget {
         ),
         //primarySwatch: Colors.black,
       ),
-      home: MyHome(),
+      //home: MyHome(),
       //home: OnBoarding(),
-      //home: Language(),
+      home: Language(),
       //home: Login(),
       //home: TestPackage(),
       initialRoute: '/',
