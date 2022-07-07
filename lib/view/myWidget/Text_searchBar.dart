@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, use_key_in_widget_constructors
+// ignore_for_file: file_names, use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -32,15 +32,15 @@ class _TextSearchBarState extends State<TextSearchBar> {
         alignment: Alignment.centerRight,
         children: [
           TextField(
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.center,
             clipBehavior: Clip.none,
             cursorColor: Colors.grey,
             style: const TextStyle(color: Colors.grey),
             onChanged: (val) {},
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               border: InputBorder.none,
               suffixStyle: TextStyle(),
-              hintText: "Search In Prodect",
+              hintText: "Search In Prodect".tr,
               hintStyle: TextStyle(
                 fontSize: 18,
                 color: Colors.grey,

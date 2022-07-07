@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tina/view/screens/categoryDetails.dart';
 
 class MySlider extends StatefulWidget {
@@ -40,7 +41,7 @@ class _MySliderState extends State<MySlider> {
   void initState() {
     pageController = PageController(
       initialPage: 0,
-      viewportFraction: 0.70,
+      viewportFraction: 0.50,
     );
     carasuelTimer = getTimer();
     super.initState();
@@ -53,13 +54,13 @@ class _MySliderState extends State<MySlider> {
   }
 
   var categoryList = [
-    'Epson',
-    'Tecnoware',
-    'Computer',
-    'Camera',
-    'K&F',
-    'Budget',
-    'Games',
+    'Epson'.tr,
+    'Tecnoware'.tr,
+    'Computer'.tr,
+    'Camera'.tr,
+    'K&F'.tr,
+    'Budget'.tr,
+    'Gaming'.tr,
   ];
   @override
   Widget build(BuildContext context) {

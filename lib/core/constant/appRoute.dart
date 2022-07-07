@@ -4,6 +4,7 @@ class AappRoute {
   static const String login = '/login';
   static const String signUp = '/signUp';
   static const String home = '/home';
+  static const String categories = '/categories';
   static const String onBoarding = '/onboarding';
   static const String mynotifcation = '/mynotifcation';
   static const String search = '/search';
@@ -15,4 +16,6 @@ class AappRoute {
   static const String sucessResetPassword = '/sucessResetPassword';
   static const String checkEmail = '/checkEmail';
   static const String products = '/products';
+  static const String favorite = '/favorite';
+  static const String language = '/language';
 }

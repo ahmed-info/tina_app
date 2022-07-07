@@ -20,7 +20,7 @@ class Language extends GetView<LocaleController> {
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Text("1".tr, style: Theme.of(context).textTheme.headline1),
+              Text('Choose Language'.tr, style: Theme.of(context).textTheme.headline1),
               SizedBox(height: 20),
               CustomButtonLang(
                 textButton: "Ar",

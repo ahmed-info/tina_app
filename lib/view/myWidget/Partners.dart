@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Partners extends StatefulWidget {
   Partners({Key? key}) : super(key: key);
@@ -46,16 +47,16 @@ class _PartnersState extends State<Partners> {
   }
 
   var brandList1 = [
-    'Epson',
-    'Canon',
-    'Sony',
-    'Tecnoware',
-    'GoPro',
-    'Hp',
-    'Dji',
-    'Budget',
-    'Brother',
-    'Nikon'
+    'Epson'.tr,
+    'Canon'.tr,
+    'Sony'.tr,
+    'Tecnoware'.tr,
+    'GoPro'.tr,
+    'Hp'.tr,
+    'Dji'.tr,
+    'Budget'.tr,
+    'Brother'.tr,
+    'Nikon'.tr
   ];
 
   @override

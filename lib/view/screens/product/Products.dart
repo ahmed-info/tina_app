@@ -8,6 +8,7 @@ import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/category/groupSubCategory.dart';
+import 'package:tina/view/myWidget/product/customProductItem.dart';
 import 'package:tina/view/myWidget/product/groupProduct.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/categoryDetails.dart';
@@ -15,9 +16,15 @@ import 'package:tina/view/screens/categoryDetails.dart';
 class Products extends StatefulWidget {
   final String productName;
   final int num;
-
-  Products({Key? key, required this.productName, required this.num})
-      : super(key: key);
+  final List<CustomProductItem>? listOfProduct;
+  // final List<CustomCategoryItem>? allSubCategory1;
+  // final List<List<CustomCategoryItem>>? allSubCategory2;
+  Products({
+    Key? key,
+    required this.productName,
+    required this.num,
+    this.listOfProduct,
+  }) : super(key: key);
 
   @override
   State<Products> createState() => _ProductsState();
@@ -25,6 +32,16 @@ class Products extends StatefulWidget {
 
 int? myi = 0;
 int? indexProduct = 0;
+//////////////////////////////////////////
+// List<CustomProductItem>? listOfProduct;
+// List<CustomCategoryItem>? allSubCategory1;
+// List<List<CustomCategoryItem>>? allSubCategory2;
+//////////////////////////////////////////////
+// var xx = CustomCategoryItem(
+//   num: 0,
+//   categoryNameItem: '',
+//   categoryImgItem: "",
+// ).categoryNameItem;
 
 class _ProductsState extends State<Products> {
   List _allGroupProduct = [
@@ -35,75 +52,38 @@ class _ProductsState extends State<Products> {
     GroupProduct(listOfProduct: productDotMatrixList),
     GroupProduct(listOfProduct: productInkList),
     GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
-    GroupProduct(listOfProduct: productInkjetPrinterList),
+
+    ///UPS
+    GroupProduct(listOfProduct: productUPSDCList),
+    GroupProduct(listOfProduct: productUPSLineInteractiveList),
+    GroupProduct(listOfProduct: productUPSLineSinewaveList),
+    GroupProduct(listOfProduct: productUPsSinglePhaseList),
+    GroupProduct(listOfProduct: productUPsThreeList),
+    GroupProduct(listOfProduct: productUPsStabe),
+    GroupProduct(listOfProduct: productUPsBattery),
+    GroupProduct(listOfProduct: productUPsAccessory),
+
+    //Laptop
+    GroupProduct(listOfProduct: productLaptop),
+    GroupProduct(listOfProduct: productSystem),
+    GroupProduct(listOfProduct: productSystem),
+
+    //camera
+    GroupProduct(listOfProduct: productCamera),
+    GroupProduct(listOfProduct: productLens),
+
+    //k&f
+    GroupProduct(listOfProduct: productBackPack),
+    GroupProduct(listOfProduct: productReflector),
+    GroupProduct(listOfProduct: productMicrphone),
+
+    //Budget
+    GroupProduct(listOfProduct: productTable),
+    GroupProduct(listOfProduct: productChair),
+
+    //Gaming
+    GroupProduct(listOfProduct: productTable),
+    GroupProduct(listOfProduct: productChair),
   ];
 
   PageController? pageController;
@@ -139,7 +119,7 @@ class _ProductsState extends State<Products> {
                   num: widget.num,
                   categoryNameItem: widget.productName,
                   categoryImgItem: "",
-                ).categoryNameItem.toString()),
+                ).categoryNameItem),
               ),
               Container(
                 margin: EdgeInsets.only(top: 10),

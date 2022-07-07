@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:tina/core/constant/appRoute.dart';
@@ -7,6 +5,8 @@ import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/screens/categories.dart';
+import 'package:tina/view/screens/favorite.dart';
+import 'package:tina/view/screens/language.dart';
 import 'package:tina/view/screens/product/Products.dart';
 import 'package:tina/view/screens/auth/checkEmail.dart';
 import 'package:tina/view/screens/auth/forgetPassword.dart';
@@ -27,7 +27,11 @@ Map<String, Widget Function(BuildContext)> routes = {
   AappRoute.search: (context) => const Search(),
   AappRoute.categoryDetails: (context) => CategoryDetails(),
   AappRoute.home: (context) => MyHome(),
-
+  AappRoute.language: (context) => const Language(),
+  AappRoute.categories: (context) => Categories(
+        index: 0,
+        myName: "",
+      ),
   //Auth
   AappRoute.login: (context) => const Login(),
   AappRoute.signUp: (context) => const SignUp(),
@@ -36,6 +40,7 @@ Map<String, Widget Function(BuildContext)> routes = {
   AappRoute.resetPassword: (context) => const ResetPassword(),
   AappRoute.successSignUp: (context) => const SuccessSignUp(),
   AappRoute.sucessResetPassword: (context) => const SuccessResetPassword(),
+  AappRoute.favorite: (context) => const Favorite(),
   AappRoute.checkEmail: (context) => const CheckEmail(),
 //onboarding
   AappRoute.onBoarding: (context) => const OnBoarding(),

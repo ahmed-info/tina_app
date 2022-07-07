@@ -5,6 +5,7 @@ import 'package:tina/view/myWidget/rounded_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:url_launcher/link.dart';
+import 'package:get/get.dart';
 
 //import 'package:messenger_launcher/messenger_launcher.dart';
 class ContactUs extends StatefulWidget {
@@ -29,7 +30,7 @@ class _ContactUsState extends State<ContactUs> {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             RoundedButton(
-                btnText: "واتساب",
+                btnText: "Whatsapp".tr,
                 colorText: Colors.white,
                 colorBtn: const Color(0xff26b53d),
                 iconBtn: Icons.whatsapp,
@@ -38,7 +39,7 @@ class _ContactUsState extends State<ContactUs> {
                   socialMedia(url);
                 }),
             RoundedButton(
-                btnText: "ماسنجر",
+                btnText: "Messenger".tr,
                 colorText: Colors.white,
                 colorBtn: Colors.blue,
                 iconBtn: Icons.messenger_rounded,
@@ -47,7 +48,7 @@ class _ContactUsState extends State<ContactUs> {
                   socialMedia(url);
                 }),
             RoundedButton(
-                btnText: "فيسبوك",
+                btnText: "Facebook".tr,
                 colorText: Colors.white,
                 colorBtn: const Color(0xff000dff),
                 iconBtn: Icons.facebook,
@@ -56,7 +57,7 @@ class _ContactUsState extends State<ContactUs> {
                   socialMedia(url);
                 }),
             RoundedButton(
-                btnText: "تيليكرام",
+                btnText: "Telegram".tr,
                 colorText: Colors.white,
                 colorBtn: const Color(0xff039be4),
                 iconBtn: Icons.telegram,
@@ -65,7 +66,7 @@ class _ContactUsState extends State<ContactUs> {
                   socialMedia(url);
                 }),
             RoundedButton(
-                btnText: "اتصل بنا",
+                btnText: "Contact Us".tr,
                 colorText: Colors.white,
                 colorBtn: Colors.amber,
                 iconBtn: Icons.phone,
@@ -74,7 +75,7 @@ class _ContactUsState extends State<ContactUs> {
                   socialMedia(url);
                 }),
             RoundedButton(
-                btnText: "البريد الالكتروني",
+                btnText: "By Email".tr,
                 colorText: Colors.white,
                 colorBtn: Colors.redAccent,
                 iconBtn: Icons.email_outlined,

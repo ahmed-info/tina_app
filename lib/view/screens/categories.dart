@@ -20,6 +20,8 @@ class Categories extends StatefulWidget {
 
 int? myi = 0;
 int? gooo = 0;
+int indexpage = 0;
+
 class _CategoriesState extends State<Categories> {
   List allGroupSubCategory = [
     GroupSubCategory(listOfSubCategory: subCategoryEpsonList),
@@ -28,59 +30,6 @@ class _CategoriesState extends State<Categories> {
     GroupSubCategory(listOfSubCategory: subCategoryCameraList),
     GroupSubCategory(listOfSubCategory: subCategoryKAndFList),
     GroupSubCategory(listOfSubCategory: subCategoryBudgetList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
-    GroupSubCategory(listOfSubCategory: subCategoryGamesList),
     GroupSubCategory(listOfSubCategory: subCategoryGamesList),
   ];
 
@@ -108,13 +57,13 @@ class _CategoriesState extends State<Categories> {
               children: categoryList
                   .asMap()
                   .map((iiii, element) => MapEntry(
-                    
                         iiii,
                         InkWell(
                           onTap: () {
                             setState(() {
                               myi = iiii;
                               gooo = iiii;
+                              indexpage = iiii;
                               //indexProduct =i;
                             });
                             return pageController!.jumpToPage(iiii);

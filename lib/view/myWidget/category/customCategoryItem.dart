@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/appRoute.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
+import 'package:tina/view/myWidget/product/customProductItem.dart';
 //import 'package:tina/data/datasource/static/static.dart';
 //import 'package:tina/view/myWidget/category/groupSubCategory.dart';
 import 'package:tina/view/screens/product/Products.dart';
@@ -11,6 +12,8 @@ import 'package:tina/view/screens/product/Products.dart';
 class CustomCategoryItem extends StatefulWidget {
   final String categoryImgItem;
   final String categoryNameItem;
+  final List<CustomProductItem>? listOfProduct;
+  // List<List<CustomCategoryItem>>? allSubCategory;
   final int num;
   //final String productName;
   const CustomCategoryItem({
@@ -18,6 +21,8 @@ class CustomCategoryItem extends StatefulWidget {
     required this.categoryImgItem,
     required this.categoryNameItem,
     required this.num,
+    //this.allSubCategory,
+    this.listOfProduct
     // required this.productName,
   }) : super(key: key);
 

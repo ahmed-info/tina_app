@@ -1,13 +1,16 @@
-// ignore_for_file: file_names, unnecessary_const
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/appColor.dart';
 import 'package:tina/core/constant/appRoute.dart';
 
-class AppDrawer extends StatelessWidget {
+class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
 
+  @override
+  State<AppDrawer> createState() => _AppDrawerState();
+}
+
+class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -19,9 +22,9 @@ class AppDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(top: 8, right: 10),
             alignment: Alignment.center,
             color: AppColor.primaryColor,
-            child: const Text(
-              'الاعدادات',
-              style: const TextStyle(
+            child: Text(
+              'Settings'.tr,
+              style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
@@ -30,8 +33,26 @@ class AppDrawer extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          buildListTile('تسجيل الدخول', Icons.login, () {
+          buildListTile('language'.tr, Icons.language_outlined, () {
+            Get.toNamed(AappRoute.language);
+          }),
+          const SizedBox(
+            height: 8,
+          ),
+          buildListTile('Registeration'.tr, Icons.login, () {
             Get.toNamed(AappRoute.login);
+          }),
+          const SizedBox(
+            height: 8,
+          ),
+          buildListTile('Favorite'.tr, Icons.favorite_border_outlined, () {
+            Get.toNamed(AappRoute.favorite);
+          }),
+          const SizedBox(
+            height: 8,
+          ),
+          buildListTile('Categories'.tr, Icons.category_outlined, () {
+            //Get.toNamed(AappRoute.categories);
           }),
         ],
       ),

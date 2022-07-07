@@ -2,6 +2,7 @@
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tina/core/constant/appColor.dart';
 import 'package:tina/view/myWidget/Avatar_and_alert.dart';
 import 'package:tina/view/myWidget/BigText.dart';
@@ -33,7 +34,7 @@ class _MyHomeState extends State<MyHome> {
             values: "vvvv",
             ind: 1,
           ),
-          BigText(text: 'Featured Partners'),
+          BigText(text: 'Shop by Brand'.tr),
           Partners()
         ],
       ),
@@ -43,12 +44,6 @@ class _MyHomeState extends State<MyHome> {
       myName: "",
     ),
     ContactUs(),
-    // Padding(
-    //   padding: const EdgeInsets.only(left: 30, right: 30),
-    //   child: Container(
-    //     color: Colors.redAccent,
-    //   ),
-    // ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -80,18 +75,20 @@ class _MyHomeState extends State<MyHome> {
           },
           items: [
             BottomNavyBarItem(
-                icon: const Icon(Icons.home),
-                title: const Text('Home'),
-                activeColor: const Color(0XFF16a085),
-                inactiveColor: Colors.black),
+              icon: const Icon(Icons.home),
+              title: Text('Home'.tr),
+              activeColor: const Color(0XFF16a085),
+              inactiveColor: Colors.black,
+            ),
             BottomNavyBarItem(
-                icon: const Icon(Icons.category),
-                title: const Text('Category'),
-                activeColor: const Color(0XFF16a085),
-                inactiveColor: Colors.black),
+              icon: const Icon(Icons.category),
+              title: Text('Category'.tr),
+              activeColor: const Color(0XFF16a085),
+              inactiveColor: Colors.black,
+            ),
             BottomNavyBarItem(
                 icon: const Icon(Icons.phone),
-                title: const Text('Contact Us'),
+                title: Text('Contact Us'.tr),
                 activeColor: const Color(0XFF16a085),
                 inactiveColor: Colors.black),
           ],

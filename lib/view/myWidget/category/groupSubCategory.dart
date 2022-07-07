@@ -3,11 +3,14 @@
 import 'package:flutter/material.dart';
 //import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
+import 'package:tina/view/myWidget/product/customProductItem.dart';
 
 class GroupSubCategory extends StatelessWidget {
   final List<CustomCategoryItem> listOfSubCategory;
+    final List<CustomProductItem>? listOfProduct;
+
   //final int indexint;
-  const GroupSubCategory({Key? key, required this.listOfSubCategory})
+  const GroupSubCategory({Key? key, required this.listOfSubCategory, this.listOfProduct})
       : super(key: key);
 
   @override

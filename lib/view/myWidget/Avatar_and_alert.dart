@@ -36,8 +36,8 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
           //   width: 20,
           // ),
           Container(
-            child: const Text(
-              'Tina Shop',
+            child:  Text(
+              'Tina Shop'.tr,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
