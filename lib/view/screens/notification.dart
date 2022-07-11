@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/app_color.dart';
 
 class MyNotification extends StatelessWidget {
   const MyNotification({Key? key}) : super(key: key);

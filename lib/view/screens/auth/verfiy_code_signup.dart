@@ -1,19 +1,19 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, file_names
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/auth/VerfiyCodeController.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/controller/auth/verfiy_code_signup_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/view/myWidget/auth/customTextBodyAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextTitleAuth.dart';
 
-class VerfiyCode extends StatelessWidget {
-  const VerfiyCode({Key? key}) : super(key: key);
+class VerfiyCodeSignUp extends StatelessWidget {
+  const VerfiyCodeSignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    VerfiyCodeControllerImp controller = Get.put(VerfiyCodeControllerImp());
+    VerfiyCodeSignUpControllerImp controller = Get.put(VerfiyCodeSignUpControllerImp());
 
     return Scaffold(
       //drawer: Drawer(),
@@ -53,7 +53,7 @@ class VerfiyCode extends StatelessWidget {
               },
               //runs when every textfield is filled
               onSubmit: (String verificationCode) {
-                controller.goToResetPassword();
+                controller.goToSuccessSignUp();
               }, // end onSubmit
             ),
           ],

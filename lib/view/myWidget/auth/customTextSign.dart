@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
 
 class CustomTextSign extends StatelessWidget {
   final String textOne;

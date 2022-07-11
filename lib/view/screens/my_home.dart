@@ -1,17 +1,17 @@
-// ignore_for_file: file_names, prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors_in_immutables
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/view/myWidget/Avatar_and_alert.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/view/myWidget/avatar_and_alert.dart';
 import 'package:tina/view/myWidget/BigText.dart';
 import 'package:tina/view/myWidget/MySlider.dart';
 import 'package:tina/view/myWidget/Partners.dart';
 import 'package:tina/view/myWidget/Text_searchBar.dart';
-import 'package:tina/view/screens/AppDrawer.dart';
+import 'package:tina/view/screens/app_drawer.dart';
 import 'package:tina/view/screens/categories.dart';
-import 'package:tina/view/screens/contactUs.dart';
+import 'package:tina/view/screens/contact_us.dart';
 
 class MyHome extends StatefulWidget {
   MyHome({Key? key}) : super(key: key);

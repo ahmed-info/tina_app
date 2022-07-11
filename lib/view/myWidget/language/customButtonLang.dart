@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, file_names
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/app_color.dart';
 
 class CustomButtonLang extends StatelessWidget {
   final String textButton;

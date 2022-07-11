@@ -1,11 +1,10 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, sized_box_for_whitespace, prefer_const_constructors, prefer_final_fields, unnecessary_new, avoid_web_libraries_in_flutter, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/category/groupSubCategory.dart';
-import 'package:tina/view/screens/product/Products.dart';
 
 class Categories extends StatefulWidget {
   final int index;

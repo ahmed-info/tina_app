@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/onBoarding_controller.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/controller/onboarding_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 
 class CustomButtonOnBoarding extends GetView<OnBoardingControllerImp> {
   const CustomButtonOnBoarding({Key? key}) : super(key: key);

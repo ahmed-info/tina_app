@@ -1,9 +1,9 @@
-// ignore_for_file: file_names, prefer_const_constructors_in_immutables, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors_in_immutables, avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
 
 class AvatarAndAlert extends StatefulWidget {
   AvatarAndAlert({Key? key}) : super(key: key);

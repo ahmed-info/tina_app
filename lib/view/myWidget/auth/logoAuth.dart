@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/imgAsset.dart';
+import 'package:tina/core/constant/app_img_asset.dart';
 
 class LogoAuth extends StatelessWidget {
   const LogoAuth({Key? key}) : super(key: key);

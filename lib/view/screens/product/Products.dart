@@ -1,17 +1,11 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, sized_box_for_whitespace, prefer_const_constructors, unused_import, prefer_final_fields, unnecessary_new, avoid_web_libraries_in_flutter, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, file_names
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/imgAsset.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
-import 'package:tina/view/myWidget/category/customMainCategory.dart';
-import 'package:tina/view/myWidget/category/groupSubCategory.dart';
-import 'package:tina/view/myWidget/product/customProductItem.dart';
-import 'package:tina/view/myWidget/product/groupProduct.dart';
-import 'package:tina/view/screens/categories.dart';
-import 'package:tina/view/screens/categoryDetails.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
+import 'package:tina/view/myWidget/product/group_product.dart';
 
 class Products extends StatefulWidget {
   final String productName;
@@ -44,6 +38,7 @@ int? indexProduct = 0;
 // ).categoryNameItem;
 
 class _ProductsState extends State<Products> {
+  // ignore: prefer_final_fields
   List _allGroupProduct = [
     GroupProduct(listOfProduct: productProjectorList),
     GroupProduct(listOfProduct: productScannerList),
@@ -138,7 +133,7 @@ class _ProductsState extends State<Products> {
                     );
                   },
                   onPageChanged: (indexPage) {
-                    print("helloooooo " + indexPage.toString());
+                    //print("helloooooo " + indexPage.toString());
                   },
                   controller: pageController,
                 ),

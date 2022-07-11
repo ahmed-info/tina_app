@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 //import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
-import 'package:tina/view/myWidget/product/customProductItem.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 class GroupSubCategory extends StatelessWidget {
   final List<CustomCategoryItem> listOfSubCategory;

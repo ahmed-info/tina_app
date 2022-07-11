@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class _AppDrawerState extends State<AppDrawer> {
             color: AppColor.primaryColor,
             child: Text(
               'Settings'.tr,
-              style: TextStyle(
+              style:const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.bold),

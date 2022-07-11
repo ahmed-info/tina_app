@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/core/constant/app_color.dart';
 
 class CustomButtonAuth extends StatelessWidget {
   final String text;

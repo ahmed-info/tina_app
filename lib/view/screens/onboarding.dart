@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/onBoarding_controller.dart';
+import 'package:tina/controller/onboarding_controller.dart';
 import 'package:tina/view/myWidget/onboarding/customButton.dart';
 import 'package:tina/view/myWidget/onboarding/customSlider.dart';
 import 'package:tina/view/myWidget/onboarding/dotIndicator.dart';

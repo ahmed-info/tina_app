@@ -1,9 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, file_names
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/auth/resetPasswordController.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/controller/auth/reset_password_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/functions/valid_input.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextBodyAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextFormAuth.dart';
@@ -41,6 +42,9 @@ class ResetPassword extends StatelessWidget {
               height: 15,
             ),
             CustomTextFormAuth(
+              valid: (val) {
+                return validInput(val!, 5, 30, "password");
+              },
               obscureText: true,
               myController: controller.password,
               hinttext: "Enter Your Password",
@@ -48,6 +52,9 @@ class ResetPassword extends StatelessWidget {
               iconData: Icons.lock_clock_outlined,
             ),
             CustomTextFormAuth(
+                valid: (val) {
+                  return validInput(val!, 5, 30, "password");
+                },
                 obscureText: true,
                 myController: controller.repassword,
                 hinttext: "Re Enter Your Password",

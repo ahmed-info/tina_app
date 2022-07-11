@@ -1,9 +1,9 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, file_names
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/controller/auth/success_signup_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 
 class SuccessSignUp extends StatelessWidget {
@@ -11,6 +11,7 @@ class SuccessSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SuccessSignUpControllerImp controller = Get.put(SuccessSignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -28,14 +29,15 @@ class SuccessSignUp extends StatelessWidget {
               child: Icon(Icons.check_circle_outline,
                   size: 200, color: AppColor.primaryColor),
             ),
-            Text('data data data'),
+            Text('successfully Registerd'),
             Spacer(),
             Container(
               width: double.infinity,
               child: CustomButtonAuth(
                 text: 'Go To Login',
                 onPressed: () {
-                  Get.offNamed(AappRoute.login);
+                  //Get.offNamed(AappRoute.login);
+                  controller.goToPageLogin();
                 },
               ),
             )

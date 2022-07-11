@@ -1,9 +1,9 @@
-import 'package:tina/core/constant/imgAsset.dart';
+import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:get/get.dart';
 import 'package:tina/data/model/onBoardingModel.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
-import 'package:tina/view/myWidget/product/customProductItem.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(

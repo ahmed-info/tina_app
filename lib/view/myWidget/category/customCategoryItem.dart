@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
-import 'package:tina/view/myWidget/product/customProductItem.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 //import 'package:tina/data/datasource/static/static.dart';
 //import 'package:tina/view/myWidget/category/groupSubCategory.dart';
-import 'package:tina/view/screens/product/Products.dart';
+import 'package:tina/view/screens/product/products.dart';
 
 class CustomCategoryItem extends StatefulWidget {
   final String categoryImgItem;

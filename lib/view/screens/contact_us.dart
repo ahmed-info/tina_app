@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, avoid_unnecessary_containers, prefer_const_constructors_in_immutables, unused_import
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors_in_immutables, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:tina/view/myWidget/rounded_button.dart';

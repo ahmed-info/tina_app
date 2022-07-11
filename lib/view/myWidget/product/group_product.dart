@@ -1,8 +1,8 @@
-// ignore_for_file: file_names
+// ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 
-import 'package:tina/view/myWidget/product/customProductItem.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 class GroupProduct extends StatelessWidget {
   final List<CustomProductItem> listOfProduct;
@@ -14,7 +14,7 @@ class GroupProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       child: Container(
         height: 650,
         child: GridView.count(

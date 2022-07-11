@@ -1,9 +1,9 @@
-// ignore_for_file: file_names, prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file:prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/controller/auth/success_reset_password_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 
 class SuccessResetPassword extends StatelessWidget {
@@ -11,6 +11,8 @@ class SuccessResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SuccessResetPasswordControllerImp controller =
+        Get.put(SuccessResetPasswordControllerImp());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -28,14 +30,15 @@ class SuccessResetPassword extends StatelessWidget {
               child: Icon(Icons.check_circle_outline,
                   size: 200, color: AppColor.primaryColor),
             ),
-            Text('data data data'),
+            Text('Successfully Registerd'),
             Spacer(),
             Container(
               width: double.infinity,
               child: CustomButtonAuth(
                 text: 'Go To Login',
                 onPressed: () {
-                  Get.offNamed(AappRoute.login);
+                  //Get.offNamed(AappRoute.login);
+                  controller.goToPageLogin();
                 },
               ),
             )

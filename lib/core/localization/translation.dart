@@ -54,7 +54,22 @@ class MyTranslation extends Translations {
           'Username': 'اسم المستخدم',
           'Enter Your Phone': 'ادخل رقم الموبايل',
           'Phone': 'Phone',
-          ' Hava an account ': ' هل تمتلك حساب ',
+          ' Have an account ': ' هل تمتلك حساب ',
+          'not valid username': 'اسم المستخدم غير صالح',
+          'not valid Email': 'البريد الالكتروني غير صالح',
+          'not valid phone number': 'رقم الموبايل غير صالح',
+          "can't be Empty": "لايمكن للحقل ان يكون فارغ",
+          'Check Email': 'تحقق من البريد الالكتروني',
+          'Check': 'تحقق',
+          'Please Enter Email': 'ادخل البريد الالكتروني',
+          'Please Enter The Digit Code Sent To ':
+              'الرجاء ادخال رمز الرقم المرسل الى ',
+          'Verification Code': 'رمز التحقق',
+          'Check Code': 'ادخل رمز التحقق',
+          'Sign In With Your Email And Password OR With Social Media':
+              'قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي',
+          'Sign Up With Your Email And Password OR With Social Media':
+              'قم بالتسجيل باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي'
         },
         "en": {
           "Settings": "Settings",
@@ -108,7 +123,22 @@ class MyTranslation extends Translations {
           'Username': 'Username',
           'Enter Your Phone': 'Enter Your Phone',
           'Phone': 'Phone',
-          ' Hava an account ': ' Hava an account ',
+          ' Have an account ': ' Have an account ',
+          'not valid username': 'not valid username',
+          'not valid Email': 'not valid Email',
+          'not valid phone number': 'not valid phone number',
+          "can't be Empty": "can't be Empty",
+          'Check Email': 'Check Email',
+          'Check': 'Check',
+          'Please Enter Email': 'Please Enter Email',
+          'Please Enter The Digit Code Sent To ':
+              'Please Enter The Digit Code Sent To ',
+          'Verification Code': 'verifcation Code',
+          'Check Code': 'Check Code',
+          'Sign In With Your Email And Password OR With Social Media':
+              'Sign In With Your Email And Password OR With Social Media',
+          'Sign Up With Your Email And Password OR With Social Media':
+              'Sign Up With Your Email And Password OR With Social Media',
         },
       };
 }

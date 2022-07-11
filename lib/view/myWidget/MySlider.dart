@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/view/screens/categoryDetails.dart';
+import 'package:tina/view/screens/category_details.dart';
 
 class MySlider extends StatefulWidget {
   final String values;

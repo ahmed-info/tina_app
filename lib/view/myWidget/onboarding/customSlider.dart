@@ -1,9 +1,9 @@
-
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/onBoarding_controller.dart';
+import 'package:tina/controller/onboarding_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
 
 class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
@@ -22,7 +22,10 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
         children: [
           Text(
             onBoardingList[i].title,
-            style: Theme.of(context).textTheme.headline1,
+            style: const TextStyle(
+                fontSize: 20,
+                color: AppColor.black,
+                fontWeight: FontWeight.bold),
           ),
           const SizedBox(
             height: 80,
@@ -30,7 +33,7 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
           Image.asset(
             onBoardingList[i].image,
             width: 200,
-            height: 230,
+            height: Get.width / 1.7,
             fit: BoxFit.fill,
           ),
           const SizedBox(
@@ -42,7 +45,11 @@ class CustomSliderOnBoarding extends GetView<OnBoardingControllerImp> {
             child: Text(
               onBoardingList[i].body,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: const TextStyle(
+                  height: 2,
+                  color: AppColor.grey,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17),
             ),
           )
         ],

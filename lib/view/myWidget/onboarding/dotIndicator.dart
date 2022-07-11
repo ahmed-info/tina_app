@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
-import 'package:tina/controller/onBoarding_controller.dart';
-import 'package:tina/core/constant/appColor.dart';
+import 'package:tina/controller/onboarding_controller.dart';
+import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
 
 class DotIndicator extends StatelessWidget {

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 //import 'package:get/get_utils/get_utils.dart';
-import 'package:tina/core/constant/appColor.dart';
-import 'package:tina/core/constant/appRoute.dart';
+import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/core/localization/changelocal.dart';
 import 'package:tina/view/myWidget/language/customButtonLang.dart';
 
