@@ -90,6 +90,7 @@ class _ProductsState extends State<Products> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -101,7 +102,7 @@ class _ProductsState extends State<Products> {
         physics: NeverScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Container(
-          width: 350,
+          width: size.width,
           height: 2010,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -134,6 +135,7 @@ class _ProductsState extends State<Products> {
                   },
                   onPageChanged: (indexPage) {
                     //print("helloooooo " + indexPage.toString());
+                   
                   },
                   controller: pageController,
                 ),

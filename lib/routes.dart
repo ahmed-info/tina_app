@@ -5,7 +5,9 @@ import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/screens/auth/verfiy_code_signup.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/favorite.dart';
+import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/language.dart';
+import 'package:tina/view/screens/product/product_cart.dart';
 import 'package:tina/view/screens/product/products.dart';
 import 'package:tina/view/screens/auth/forget_password.dart';
 import 'package:tina/view/screens/auth/login.dart';
@@ -35,6 +37,7 @@ List<GetPage<dynamic>>? routes = [
       name: AappRoute.sucessResetPassword,
       page: () => const SuccessResetPassword()),
   GetPage(name: AappRoute.favorite, page: () => const Favorite()),
+  GetPage(name: AappRoute.privacyPolicy, page: () => const PrivacyPolicy()),
   GetPage(name: AappRoute.mynotifcation, page: () => const MyNotification()),
   GetPage(name: AappRoute.search, page: () => const Search()),
   GetPage(name: AappRoute.categoryDetails, page: () => CategoryDetails()),
@@ -47,19 +50,21 @@ List<GetPage<dynamic>>? routes = [
       name: AappRoute.products,
       page: () =>
           Products(num: 0, productName: subCategoryList[indexProduct!].title)),
+  GetPage(name: AappRoute.productCart, page: () => ProductCart()),
 ];
 
-// Map<String, Widget Function(BuildContext)> routess = {
+// Map<String, Widget Function(BuildContext)> routes = {
 //   AappRoute.mynotifcation: (context) => const MyNotification(),
 //   AappRoute.search: (context) => const Search(),
 //   AappRoute.categoryDetails: (context) => CategoryDetails(),
 //   AappRoute.home: (context) => MyHome(),
 //   AappRoute.language: (context) => const Language(),
+//   AappRoute.privacyPolicy: (context) => const PrivacyPolicy(),
 //   AappRoute.categories: (context) => Categories(
 //         index: 0,
 //         myName: "",
 //       ),
-//   //Auth
+// //   //Auth
 //   AappRoute.login: (context) => const Login(),
 //   AappRoute.signUp: (context) => const SignUp(),
 //   AappRoute.forgetPassword: (context) => const ForgetPassword(),
@@ -69,6 +74,7 @@ List<GetPage<dynamic>>? routes = [
 //   AappRoute.successSignUp: (context) => const SuccessSignUp(),
 //   AappRoute.sucessResetPassword: (context) => const SuccessResetPassword(),
 //   AappRoute.favorite: (context) => const Favorite(),
+//   AappRoute.productCart: (context) => ProductCart(),
 // //onboarding
 //   AappRoute.onBoarding: (context) => const OnBoarding(),
 //   //product

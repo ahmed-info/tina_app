@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+//import 'package:get/get.dart';
 import 'package:tina/core/constant/app_color.dart';
 
 class CategoryDetails extends StatefulWidget {

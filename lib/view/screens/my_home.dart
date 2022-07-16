@@ -10,6 +10,7 @@ import 'package:tina/view/myWidget/MySlider.dart';
 import 'package:tina/view/myWidget/Partners.dart';
 import 'package:tina/view/myWidget/Text_searchBar.dart';
 import 'package:tina/view/screens/app_drawer.dart';
+import 'package:tina/view/screens/cart.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/contact_us.dart';
 
@@ -41,8 +42,9 @@ class _MyHomeState extends State<MyHome> {
     ),
     Categories(
       index: 0,
-      myName: "",
+      myName: "".tr,
     ),
+    const Cart(),
     ContactUs(),
   ];
   @override
@@ -83,6 +85,12 @@ class _MyHomeState extends State<MyHome> {
             BottomNavyBarItem(
               icon: const Icon(Icons.category),
               title: Text('Category'.tr),
+              activeColor: const Color(0XFF16a085),
+              inactiveColor: Colors.black,
+            ),
+            BottomNavyBarItem(
+              icon: const Icon(Icons.shopping_cart),
+              title: Text('Cart'.tr),
               activeColor: const Color(0XFF16a085),
               inactiveColor: Colors.black,
             ),

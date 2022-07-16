@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors, unused_import
+// ignore_for_file: prefer_const_constructors, unused_import, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:tina/binding.dart';
+import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/core/localization/changelocal.dart';
 import 'package:tina/core/localization/translation.dart';
@@ -20,11 +21,11 @@ import 'package:tina/view/screens/onboarding.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Tina Shop',
       locale: controller.language,
-
+      //home: Language(),
       theme: controller.appTheme,
       initialRoute: '/',
       initialBinding: MyBinding(),

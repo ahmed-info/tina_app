@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
-class GroupSubCategory extends StatelessWidget {
+class GroupSubCategory extends StatefulWidget {
   final List<CustomCategoryItem> listOfSubCategory;
     final List<CustomProductItem>? listOfProduct;
 
@@ -13,6 +13,11 @@ class GroupSubCategory extends StatelessWidget {
   const GroupSubCategory({Key? key, required this.listOfSubCategory, this.listOfProduct})
       : super(key: key);
 
+  @override
+  State<GroupSubCategory> createState() => _GroupSubCategoryState();
+}
+
+class _GroupSubCategoryState extends State<GroupSubCategory> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +36,7 @@ class GroupSubCategory extends StatelessWidget {
               childAspectRatio: 7 / 8,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10),
-          children: listOfSubCategory
+          children: widget.listOfSubCategory
               .map((e) => CustomCategoryItem(
                     num: e.num,
                     categoryImgItem: e.categoryImgItem,

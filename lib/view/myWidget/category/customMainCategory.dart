@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/app_color.dart';
 
-class CustomMainCategory extends StatelessWidget {
+class CustomMainCategory extends StatefulWidget {
   final String imgUrl;
   final String categoryName;
   const CustomMainCategory({
@@ -12,6 +12,11 @@ class CustomMainCategory extends StatelessWidget {
     required this.categoryName,
   }) : super(key: key);
 
+  @override
+  State<CustomMainCategory> createState() => _CustomMainCategoryState();
+}
+
+class _CustomMainCategoryState extends State<CustomMainCategory> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,11 +33,11 @@ class CustomMainCategory extends StatelessWidget {
           //scale: 0.5,
           fit: BoxFit.contain,
           image: AssetImage(
-            imgUrl,
+            widget.imgUrl,
           ),
         ),
       ),
-      child: Text(categoryName, style: Theme.of(context).textTheme.headline3),
+      child: Text(widget.categoryName, style: Theme.of(context).textTheme.headline3),
     );
   }
 }

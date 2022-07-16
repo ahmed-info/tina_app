@@ -24,7 +24,7 @@ class _AppDrawerState extends State<AppDrawer> {
             color: AppColor.primaryColor,
             child: Text(
               'Settings'.tr,
-              style:const TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
@@ -52,7 +52,13 @@ class _AppDrawerState extends State<AppDrawer> {
             height: 8,
           ),
           buildListTile('Categories'.tr, Icons.category_outlined, () {
-            //Get.toNamed(AappRoute.categories);
+            Get.toNamed(AappRoute.categories);
+          }),
+          const SizedBox(
+            height: 8,
+          ),
+          buildListTile('Privacy & Policy'.tr, Icons.privacy_tip_outlined, () {
+            Get.toNamed(AappRoute.privacyPolicy);
           }),
         ],
       ),

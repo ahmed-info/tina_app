@@ -140,6 +140,10 @@ class _MySliderState extends State<MySlider> {
                       ),
                     ),
                   );
+                  // Get.toNamed(AappRoute.categoryDetails, arguments: {
+                  //   "value": '${categoryList[i]}',
+                  //   "index": i + 1
+                  // });
                 },
                 child: PageView.builder(
                   controller: pageController,

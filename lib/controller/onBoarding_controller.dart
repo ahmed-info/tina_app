@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/app_route.dart';
@@ -18,7 +20,7 @@ class OnBoardingControllerImp extends OnBoardingController {
     currentPage++;
     if (currentPage > onBoardingList.length - 1) {
       myServices.sharedPreferences.setString("onboarding", "1");
-      Get.offAllNamed(AappRoute.home);
+      Get.offNamed(AappRoute.home);
     } else {
       pageController.animateToPage(currentPage,
           duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);

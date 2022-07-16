@@ -160,7 +160,7 @@ List<CustomCategoryItem> subCategoryTechnowareList = [
 ];
 
 List<CustomCategoryItem> subCategoryComputerList = [
-   CustomCategoryItem(
+  CustomCategoryItem(
     //productName: "Labtop",
     categoryImgItem: AppImgAsset.labtop,
     categoryNameItem: "Laptop".tr, num: 15,
@@ -180,13 +180,13 @@ List<CustomCategoryItem> subCategoryComputerList = [
 List<CustomCategoryItem> subCategoryCameraList = [
   const CustomCategoryItem(
     //productName: "Camera",
-    categoryImgItem: AppImgAsset.camera,
+    categoryImgItem: AppImgAsset.camera2000d,
     categoryNameItem: "Camera", num: 18,
   ),
   const CustomCategoryItem(
     //productName: "Camera",
     categoryImgItem: AppImgAsset.cameraLens,
-    categoryNameItem: "Camera", num: 19,
+    categoryNameItem: "Lens", num: 19,
   ),
 ];
 
@@ -254,90 +254,120 @@ List<CustomProductItem> productInkList = [
     productName: "103 EcoTank 4-colour Multipack",
     price: 30,
     num: 1000,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkBlackXXL,
     productName: "Black XXL Ink Supply Unit",
     price: 45,
     num: 1001,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkCyanXL,
     productName: "Cyan XL Ink Supply Unit",
     price: 135,
     num: 1002,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20750CatridgeT02S2,
     productName: "Ink For Printer 20750 Catridge T02S2",
     price: 135,
     num: 1003,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkT9741,
     productName: "Ink 869 Catridge T9741",
     price: 140,
     num: 1004,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkT9742,
     productName: "Ink 869 Catridge T9742",
     price: 140,
     num: 1005,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkT9741,
     productName: "Ink 869 Catridge T9741",
     price: 140,
     num: 1006,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.inkT9744,
     productName: "Ink 869 Catridge T9744",
     price: 140,
     num: 1007,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20600CatridgeT02Q1,
     productName: "Ink 20600 Catridge T02Q1",
     price: 250,
     num: 1008,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20600CatridgeT02Q2,
     productName: "Ink 20600 Catridge T02Q1",
     price: 250,
     num: 1009,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20600CatridgeT02Q3,
     productName: "Ink 20600 Catridge T02Q3",
     price: 250,
     num: 1010,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20600CatridgeT02Q4,
     productName: "Ink 20600 Catridge T02Q4",
     price: 250,
     num: 1011,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20750CatridgeT02S1,
     productName: "Ink 20750 Catridge T02S1",
     price: 250,
     num: 1012,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20750CatridgeT02S3,
     productName: "Ink 20750 Catridge T02S3",
     price: 250,
     num: 1013,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.ink20750CatridgeT02S4,
     productName: "Ink 20750 Catridge T02S4",
     price: 250,
     num: 1014,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 
@@ -347,18 +377,24 @@ List<CustomProductItem> productInkjetPrinterList = [
     productName: "WorkForce Pro WF-C869R Network Multifunction Color Printer",
     price: 1600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.l1300,
     productName: "EcoTank L1300",
     price: 490,
     num: 1016,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.l1800,
     productName: "EcoTank L1800",
     price: 730,
     num: 1017,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 List<CustomProductItem> productProjectorList = [
@@ -367,36 +403,48 @@ List<CustomProductItem> productProjectorList = [
     productName: "Projector EB-E01",
     price: 400,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.projectorEBX06,
     productName: "Projector EB-X06",
     price: 450,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.projectorEBX51,
     productName: "Projector EB-X51",
     price: 410,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.projectorEHTW7100,
     productName: "Projector EH-TW7100",
     //price: 400,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.projectorE10,
     productName: "projector EB-E10",
     price: 440,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.projectorEBFH06,
     productName: "projector Epson EB-FH06",
     price: 750,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 
@@ -406,66 +454,88 @@ List<CustomProductItem> productScannerList = [
     productName: "Scanner Ds-1630",
     price: 255,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS1660,
     productName: "Scanner Ds-1660",
     //price: 255,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS30000,
     productName: "Scanner Ds-30000",
     price: 1800,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS310,
     productName: "Scanner Ds-310",
     price: 200,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS32000,
     productName: "Scanner Ds-32000",
     price: 2150,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS410,
     productName: "Scanner Ds-410",
     price: 275,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS530,
     productName: "Scanner Ds-530",
     price: 300,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS730,
     productName: "Scanner Ds-730",
     //price: 255,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS770,
     productName: "Scanner Ds-770",
     price: 400,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS870,
     productName: "Scanner Ds-870",
     price: 460,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.scannerDS970,
     productName: "Scanner Ds-970",
     //price: 255,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 List<CustomProductItem> productPOSList = [
@@ -473,25 +543,33 @@ List<CustomProductItem> productPOSList = [
     productImg: AppImgAsset.posEum30,
     productName: "Epson EU-m30",
     //price: 1600,
-    num: 1015,
+    num: 1016,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.postmt20lll,
     productName: "Epson TM-T20III Series",
     price: 215,
-    num: 1015,
+    num: 1017,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.postmt88vl,
     productName: "Epson TM-T88VI-iHub Series",
     //price: 1600,
-    num: 1015,
+    num: 1018,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.postmu220,
     productName: "Epson TM-U220",
     //price: 1600,
-    num: 1015,
+    num: 1019,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 
@@ -501,12 +579,16 @@ List<CustomProductItem> productColorLabelList = [
     productName: "ColorWorks CW-C6000 Series",
     //price: 1600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.labelcwc6500,
     productName: "ColorWorks CW-C6500 Series",
     //price: 1600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 
@@ -516,24 +598,32 @@ List<CustomProductItem> productDotMatrixList = [
     productName: "24-Pin Impact Dot Matrix Printers",
     //price: 1600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.dot9pinimpact,
     productName: "9-Pin Impact Dot Matrix Printers",
     //price: 1600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.dotLQ2190,
     productName: "Dot Matrix LQ-2190",
     price: 550,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.dotfx2190,
     productName: "FX-2190II Impact Dot Matrix Printer",
     price: 600,
     num: 1015,
+    description:
+        "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
   ),
 ];
 
@@ -544,6 +634,7 @@ List<CustomProductItem> productUPSDCList = [
     productName: "Desk-Tower 18W",
     //price: 1600,
     num: 1015,
+    description: "Csfdgfng sfdgfhnjm, dgfhg",
   ),
   const CustomProductItem(
     productImg: AppImgAsset.upsDC,

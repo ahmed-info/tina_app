@@ -17,5 +17,7 @@ class AappRoute {
   static const String sucessResetPassword = '/sucessResetPassword';
   static const String products = '/products';
   static const String favorite = '/favorite';
+  static const String privacyPolicy = '/privacyPolicy';
   static const String language = '/language';
+  static const String productCart = '/productCart';
 }

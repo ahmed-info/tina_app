@@ -4,15 +4,19 @@ class RoundedButton extends StatelessWidget {
   final String btnText;
   final Color colorText;
   final Color colorBtn;
-  final IconData iconBtn;
+  final Color colorIcon;
+  final double minWidth;
+  final IconData? iconBtn;
   final Function onBtnPressed;
   const RoundedButton({
     Key? key,
     required this.btnText,
     required this.colorText,
     required this.colorBtn,
-    required this.iconBtn,
     required this.onBtnPressed,
+    this.colorIcon = Colors.white,
+    this.minWidth = 280,
+    this.iconBtn,
   }) : super(key: key);
 
   @override
@@ -29,7 +33,7 @@ class RoundedButton extends StatelessWidget {
             onPressed: () {
               onBtnPressed();
             },
-            minWidth: 280,
+            minWidth: minWidth,
             height: 60,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +49,7 @@ class RoundedButton extends StatelessWidget {
                 const SizedBox(
                   width: 15,
                 ),
-                Icon(iconBtn, color: Colors.white)
+                Icon(iconBtn, color: colorIcon)
               ],
             ),
           );

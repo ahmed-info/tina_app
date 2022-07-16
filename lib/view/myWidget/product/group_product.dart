@@ -31,6 +31,7 @@ class GroupProduct extends StatelessWidget {
                     productName: e.productName,
                     productImg: e.productImg,
                     price: e.price,
+                    description: e.description,
                   ))
               .toList(),
         ),

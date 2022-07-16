@@ -5,6 +5,7 @@ import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/category/groupSubCategory.dart';
+//import 'package:tina/view/screens/app_drawer.dart';
 
 class Categories extends StatefulWidget {
   final int index;
@@ -41,86 +42,94 @@ class _CategoriesState extends State<Categories> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SingleChildScrollView(
-          child: Container(
-            //height: 800,
-            width: 80,
-            //color: const Color(0XFF16a085),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: categoryList
-                  .asMap()
-                  .map((iiii, element) => MapEntry(
-                        iiii,
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              myi = iiii;
-                              gooo = iiii;
-                              indexpage = iiii;
-                              //indexProduct =i;
-                            });
-                            return pageController!.jumpToPage(iiii);
-                            //return pageController. == 0;
-                          },
-                          child: CustomMainCategory(
-                              imgUrl: 'assets/images/category${iiii + 1}.png',
-                              categoryName: categoryList[iiii]),
-                        ),
-                      ))
-                  .values
-                  .toList(),
-            ),
-          ),
-        ),
-        SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
+    return Material(
+      child: Scaffold(
+        //appBar: AppBar(),
+        body: SafeArea(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: EdgeInsets.only(left: 10),
-                padding: EdgeInsets.only(bottom: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: AppColor.primaryColor,
-                ),
-                height: 50,
-                width: 250,
+              SingleChildScrollView(
                 child: Container(
-                  alignment: Alignment.center,
-                  child: Text(
-                    categoryList[myi!],
-                    style: TextStyle(color: Colors.white, fontSize: 17),
+                  //height: 800,
+                  width: 80,
+                  //color: const Color(0XFF16a085),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: categoryList
+                        .asMap()
+                        .map((iiii, element) => MapEntry(
+                              iiii,
+                              InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    myi = iiii;
+                                    gooo = iiii;
+                                    indexpage = iiii;
+                                    //indexProduct =i;
+                                  });
+                                  return pageController!.jumpToPage(iiii);
+                                  //return pageController. == 0;
+                                },
+                                child: CustomMainCategory(
+                                    imgUrl:
+                                        'assets/images/category${iiii + 1}.png',
+                                    categoryName: categoryList[iiii]),
+                              ),
+                            ))
+                        .values
+                        .toList(),
                   ),
                 ),
               ),
-              Container(
-                //margin: EdgeInsets.only(bottom: 150),
-                width: 250,
-                height: 650,
-                child: PageView.builder(
-                  allowImplicitScrolling: true,
-                  scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  reverse: false,
-                  itemCount: allGroupSubCategory.length,
-                  itemBuilder: (BuildContext ctx, index) {
-                    return Container(
-                      child: allGroupSubCategory[index],
-                    );
-                  },
-                  controller: pageController,
+              SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 10),
+                      padding: EdgeInsets.only(bottom: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: AppColor.primaryColor,
+                      ),
+                      height: 50,
+                      width: 250,
+                      child: Container(
+                        alignment: Alignment.center,
+                        child: Text(
+                          categoryList[myi!],
+                          style: TextStyle(color: Colors.white, fontSize: 17),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      //margin: EdgeInsets.only(bottom: 150),
+                      width: 250,
+                      height: 650,
+                      child: PageView.builder(
+                        allowImplicitScrolling: true,
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        reverse: false,
+                        itemCount: allGroupSubCategory.length,
+                        itemBuilder: (BuildContext ctx, index) {
+                          return Container(
+                            child: allGroupSubCategory[index],
+                          );
+                        },
+                        controller: pageController,
+                      ),
+                    )
+                  ],
                 ),
               )
             ],
           ),
-        )
-      ],
+        ),
+      ),
     );
   }
 }

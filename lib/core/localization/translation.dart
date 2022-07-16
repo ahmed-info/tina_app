@@ -69,7 +69,9 @@ class MyTranslation extends Translations {
           'Sign In With Your Email And Password OR With Social Media':
               'قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي',
           'Sign Up With Your Email And Password OR With Social Media':
-              'قم بالتسجيل باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي'
+              'قم بالتسجيل باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي',
+          'Cart': 'عربة التسوق',
+          'Privacy & Policy': 'السياسة والخصوصية',
         },
         "en": {
           "Settings": "Settings",
@@ -139,6 +141,8 @@ class MyTranslation extends Translations {
               'Sign In With Your Email And Password OR With Social Media',
           'Sign Up With Your Email And Password OR With Social Media':
               'Sign Up With Your Email And Password OR With Social Media',
+          'Cart': 'Cart',
+          'Privacy & Policy': 'Privacy & Policy',
         },
       };
 }
