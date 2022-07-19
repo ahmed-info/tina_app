@@ -1,12 +1,16 @@
 import 'package:get/get.dart';
+import 'package:tina/controller/fav_counter_controller.dart';
+import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/core/middleware/mymiddleware.dart';
 import 'package:tina/data/datasource/static/static.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/auth/verfiy_code_signup.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/favorite.dart';
-import 'package:tina/view/screens/privacy_policy.dart';
+//import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/language.dart';
+import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/product/product_cart.dart';
 import 'package:tina/view/screens/product/products.dart';
 import 'package:tina/view/screens/auth/forget_password.dart';
@@ -22,6 +26,7 @@ import 'package:tina/view/screens/notification.dart';
 import 'package:tina/view/screens/onboarding.dart';
 import 'package:tina/view/screens/search.dart';
 
+FavCounterControllerImp favCounter = Get.put(FavCounterControllerImp());
 List<GetPage<dynamic>>? routes = [
   GetPage(
       name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
@@ -36,7 +41,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AappRoute.sucessResetPassword,
       page: () => const SuccessResetPassword()),
-  GetPage(name: AappRoute.favorite, page: () => const Favorite()),
+  GetPage(name: AappRoute.favorite, page: () => Favorite(favCounter.favList)),
   GetPage(name: AappRoute.privacyPolicy, page: () => const PrivacyPolicy()),
   GetPage(name: AappRoute.mynotifcation, page: () => const MyNotification()),
   GetPage(name: AappRoute.search, page: () => const Search()),

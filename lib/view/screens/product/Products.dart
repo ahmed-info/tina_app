@@ -11,6 +11,7 @@ class Products extends StatefulWidget {
   final String productName;
   final int num;
   final List<CustomProductItem>? listOfProduct;
+
   // final List<CustomCategoryItem>? allSubCategory1;
   // final List<List<CustomCategoryItem>>? allSubCategory2;
   Products({
@@ -39,7 +40,7 @@ int? indexProduct = 0;
 
 class _ProductsState extends State<Products> {
   // ignore: prefer_final_fields
-  List _allGroupProduct = [
+  List allGroupProduct = [
     GroupProduct(listOfProduct: productProjectorList),
     GroupProduct(listOfProduct: productScannerList),
     GroupProduct(listOfProduct: productPOSList),
@@ -91,6 +92,7 @@ class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -126,16 +128,15 @@ class _ProductsState extends State<Products> {
                   scrollDirection: Axis.horizontal,
                   physics: BouncingScrollPhysics(),
                   reverse: false,
-                  itemCount: _allGroupProduct.length,
+                  itemCount: allGroupProduct.length,
                   itemBuilder: (BuildContext ctx, int indexx) {
                     //indexProduct= indexx;
                     return Container(
-                      child: _allGroupProduct[indexProduct!],
+                      child: allGroupProduct[indexProduct!],
                     );
                   },
                   onPageChanged: (indexPage) {
                     //print("helloooooo " + indexPage.toString());
-                   
                   },
                   controller: pageController,
                 ),

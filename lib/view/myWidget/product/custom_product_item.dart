@@ -8,16 +8,14 @@ class CustomProductItem extends StatelessWidget {
   final String productName;
   final String productImg;
   final String description;
-  final double? price;
+  final double? productPrice;
   final int num;
-  final bool isFaviorate;
   const CustomProductItem({
     required this.productName,
     required this.productImg,
-    this.price = 0,
+    this.productPrice = 0,
     this.num = 0,
     this.description = "",
-    this.isFaviorate = false,
   });
 
   @override
@@ -28,7 +26,7 @@ class CustomProductItem extends StatelessWidget {
           "productNum": num,
           "productName": productName,
           "productImg": productImg,
-          "productPrice": price,
+          "productPrice": productPrice,
           "productDescription": description,
         });
       },
@@ -60,16 +58,9 @@ class CustomProductItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "\$ " + price.toString(),
+                      "\$ " + productPrice.toString(),
                       style: TextStyle(color: Colors.blue),
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: Icon(
-                        isFaviorate ? Icons.favorite : Icons.favorite_outline,
-                        color: Colors.red,
-                      ),
-                    )
                   ],
                 ),
               )

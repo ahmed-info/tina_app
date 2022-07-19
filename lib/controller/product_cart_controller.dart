@@ -12,4 +12,8 @@ class CartController extends GetxController {
   void addItem() {
     numOfItems.value++;
   }
+
+  String amount(String price) {
+    return (numOfItems.value * double.parse(price)).toString();
+  }
 }

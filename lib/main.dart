@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tina/binding.dart';
+import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/core/localization/changelocal.dart';
@@ -30,6 +31,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());
+    //CartController cartController = Get.put(CartController());
+    FavCounterControllerImp favCounterController =
+        Get.put(FavCounterControllerImp());
     return GetMaterialApp(
       translations: MyTranslation(),
 

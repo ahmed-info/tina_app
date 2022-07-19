@@ -3,10 +3,11 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/view/myWidget/product/add_to_cart.dart';
 import 'package:tina/view/myWidget/product/build_button.dart';
-import 'package:tina/view/myWidget/rounded_button.dart';
 
 class ProductCart extends StatefulWidget {
   ProductCart({Key? key}) : super(key: key);
@@ -16,12 +17,15 @@ class ProductCart extends StatefulWidget {
 }
 
 class _ProductCartState extends State<ProductCart> {
-  int itemCount = 1;
+  //int itemCount = 1;
+
   @override
   Widget build(BuildContext context) {
+    FavCounterControllerImp favCounterController = Get.find();
     Size size = MediaQuery.of(context).size;
+    var amount = Get.arguments['productPrice'].toString();
     CartController cartController = Get.put(CartController());
-
+    // qtyPrice = int.parse(Get.arguments['productPrice']);
     return Container(
       //color: Colors.green,
       child: Scaffold(
@@ -37,15 +41,20 @@ class _ProductCartState extends State<ProductCart> {
             icon: Icon(Icons.arrow_back),
           ),
           actions: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Badge(
-                  padding: EdgeInsets.only(left: 5, right: 5, bottom: 10),
-                  badgeContent: Text(
-                    "0",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  child: Icon(Icons.favorite)),
+            InkWell(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Badge(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 10),
+                    badgeContent: Obx(() => Text(
+                          favCounterController.numOfItems.value.toString(),
+                          style: TextStyle(color: Colors.white),
+                        )),
+                    child: Icon(Icons.favorite)),
+              ),
+              onTap: () {
+                favCounterController.goToFavoritePage();
+              },
             ),
             Padding(
               padding: EdgeInsets.only(right: 20),
@@ -99,24 +108,27 @@ class _ProductCartState extends State<ProductCart> {
                               overflow: TextOverflow.clip,
                               maxLines: 3),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(children: [
-                              TextSpan(
-                                  text: "Price\n",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20)),
-                              TextSpan(
-                                text: Get.arguments['productPrice'].toString(),
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline2!
-                                    .copyWith(color: Colors.white),
+                        Obx(() => Container(
+                              margin: EdgeInsets.only(left: 20),
+                              child: RichText(
+                                text: TextSpan(children: [
+                                  TextSpan(
+                                    text: "Price\n",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 20),
+                                  ),
+                                  TextSpan(
+                                    //text: Get.arguments['productPrice'].toString(),
+
+                                    text: cartController.amount(amount),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline2!
+                                        .copyWith(color: Colors.white),
+                                  ),
+                                ]),
                               ),
-                            ]),
-                          ),
-                        ),
+                            )),
                         Get.arguments['productDescription'] != ""
                             ? Container(
                                 height: 150,
@@ -135,18 +147,7 @@ class _ProductCartState extends State<ProductCart> {
                                 ),
                               )
                             : Container(),
-                        Container(
-                          alignment: Alignment.center,
-                          child: RoundedButton(
-                            btnText: "Buy Now",
-                            colorText: AppColor.primaryColor,
-                            colorIcon: AppColor.primaryColor,
-                            colorBtn: Colors.white,
-                            minWidth: 200,
-                            iconBtn: Icons.shopping_cart,
-                            onBtnPressed: () {},
-                          ),
-                        ),
+                        AddToCart(),
                       ],
                     ),
                   ),
@@ -176,6 +177,23 @@ class _ProductCartState extends State<ProductCart> {
                           onPressed: () {
                             cartController.removeItem();
                           },
+                        ),
+                        InkWell(
+                          onTap: () {
+                            favCounterController.addFavItemToList();
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(left: 50),
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 35,
+                            height: 35,
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                       ],
                     ),
