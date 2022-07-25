@@ -12,6 +12,7 @@ import 'package:tina/view/screens/favorite.dart';
 import 'package:tina/view/screens/language.dart';
 import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/product/product_cart.dart';
+import 'package:tina/view/screens/product/product_marka.dart';
 import 'package:tina/view/screens/product/products.dart';
 import 'package:tina/view/screens/auth/forget_password.dart';
 import 'package:tina/view/screens/auth/login.dart';
@@ -56,6 +57,14 @@ List<GetPage<dynamic>>? routes = [
       page: () =>
           Products(num: 0, productName: subCategoryList[indexProduct!].title)),
   GetPage(name: AappRoute.productCart, page: () => ProductCart()),
+  GetPage(
+      name: AappRoute.productMarka,
+      page: () => ProductMarka(
+            productName: "hameed",
+            num: Get.arguments['index'],
+            //listOfProduct: Get.arguments['listOfProduct'],
+            listOfProduct: productInkList,
+          )),
 ];
 
 // Map<String, Widget Function(BuildContext)> routes = {

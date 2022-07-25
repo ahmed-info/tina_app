@@ -4,13 +4,19 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tina/core/constant/app_route.dart';
+import 'package:tina/data/datasource/static/static.dart';
+import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/screens/category_details.dart';
+import 'package:tina/view/screens/product/products.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 class MySlider extends StatefulWidget {
   final String values;
   final int ind;
-
-  MySlider({Key? key, required this.values, required this.ind})
+  final List<CustomProductItem>? listOfProduct;
+  MySlider(
+      {Key? key, required this.values, required this.ind, this.listOfProduct})
       : super(key: key);
 
   @override
@@ -28,11 +34,11 @@ class _MySliderState extends State<MySlider> {
       if (pageNo == 6) {
         pageNo == 0;
       }
-      pageController.animateToPage(
-        pageNo,
+     pageController.animateToPage(
+       pageNo,
         duration: const Duration(seconds: 1),
-        curve: Curves.easeInCirc,
-      );
+       curve: Curves.easeInCirc,
+     );
       pageNo++;
     });
   }
@@ -79,13 +85,18 @@ class _MySliderState extends State<MySlider> {
                     categoryList.length,
                     (index) => GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => CategoryDetails(
-                                    value: '${categoryList[index]}',
-                                    index: index + 1),
-                              ),
-                            );
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => CategoryDetails(
+                            //         value: '${categoryList[index]}',
+                            //         index: index + 1),
+                            //   ),
+                            // );
+
+                            Get.toNamed(AappRoute.productMarka, arguments: {
+                              "value": '${categoryList[i]}',
+                              "index": i + 1
+                            });
                           },
                           onPanDown: (d) {
                             carasuelTimer?.cancel();
@@ -132,18 +143,27 @@ class _MySliderState extends State<MySlider> {
               //Sliderssss
               child: InkWell(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => CategoryDetails(
-                        value: '${categoryList[i]}',
-                        index: i + 1,
-                      ),
-                    ),
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (context) => CategoryDetails(
+                  //       value: '${categoryList[i]}',
+                  //       index: i + 1,
+                  //     ),
+                  //   ),
+                  // );
+                  var wz = allSubCategory[i];
+                  print(wz);
+                  Get.toNamed(
+                    AappRoute.productMarka,
+                    arguments: {
+                      "value": '${categoryList[i]}',
+                      "index": i + 1,
+                      "listOfSubCategory": allSubCategory[i]
+                      //"listOfProduct": 101.toString(),
+                    },
                   );
-                  // Get.toNamed(AappRoute.categoryDetails, arguments: {
-                  //   "value": '${categoryList[i]}',
-                  //   "index": i + 1
-                  // });
+                  // print("My List======================" +
+                  //    Get.arguments['listOfProduct']);
                 },
                 child: PageView.builder(
                   controller: pageController,
@@ -193,7 +213,6 @@ class _MySliderState extends State<MySlider> {
                                       ),
                                       alignment: Alignment.bottomLeft),
                                   decoration: BoxDecoration(
-                                      //color: Color(0xff025c1f),
                                       color: Color(0XFF16a085),
                                       borderRadius: BorderRadius.circular(24)),
                                 ),

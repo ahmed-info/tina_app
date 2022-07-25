@@ -15,28 +15,36 @@ abstract class FavCounterController extends GetxController {
 class FavCounterControllerImp extends FavCounterController {
   var numOfItems = 0.obs;
   var favList = <CustomProductItem>[].obs;
+  var isFavorite = false.obs;
   @override
   void addFavItemToList() {
-    if (!favList.contains(
-      CustomProductItem(
-        productName: Get.arguments["productName"],
-        productImg: Get.arguments["productImg"],
-        productPrice: Get.arguments["productPrice"],
-      ).productName,
-    )) {
+    if (!isFavorite.value) {
+      //isFavorite = true;
       favList.add(CustomProductItem(
         productName: Get.arguments["productName"],
         productImg: Get.arguments["productImg"],
         productPrice: Get.arguments["productPrice"],
       ));
+
       numOfItems++;
+      //update();
     } else {
-      Get.snackbar("title", "message");
+      //isFavorite = false;
+      //Get.snackbar("Added".tr, "It has already been added to your wishlist".tr);
     }
   }
 
   @override
   void goToFavoritePage() {
     Get.toNamed(AappRoute.favorite);
+  }
+
+  @override
+  bool isFavorites() {
+    if (isFavorite.value == false) {
+      return isFavorite.value = true;
+    } else {
+      return false;
+    }
   }
 }

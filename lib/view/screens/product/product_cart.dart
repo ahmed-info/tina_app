@@ -4,6 +4,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
+import 'package:tina/controller/is_fav_Controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/view/myWidget/product/add_to_cart.dart';
@@ -18,10 +19,12 @@ class ProductCart extends StatefulWidget {
 
 class _ProductCartState extends State<ProductCart> {
   //int itemCount = 1;
-
+  //bool isFav = false;
   @override
   Widget build(BuildContext context) {
     FavCounterControllerImp favCounterController = Get.find();
+    IsFavControllerImp isFavControllerImp = Get.put(IsFavControllerImp());
+    // FavCounterControllerImp favController = Get.put(FavCounterControllerImp());
     Size size = MediaQuery.of(context).size;
     var amount = Get.arguments['productPrice'].toString();
     CartController cartController = Get.put(CartController());
@@ -180,7 +183,15 @@ class _ProductCartState extends State<ProductCart> {
                         ),
                         InkWell(
                           onTap: () {
-                            favCounterController.addFavItemToList();
+                            if (isFavControllerImp.isFavorite.value == false) {
+                              isFavControllerImp.isFavorite.value = true;
+                              favCounterController.addFavItemToList();
+                            } else {
+                              Get.snackbar(
+                                  "Added".tr,
+                                  "It has already been added to your wishlist"
+                                      .tr);
+                            }
                           },
                           child: Container(
                             margin: EdgeInsets.only(left: 50),

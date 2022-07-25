@@ -6,6 +6,7 @@ abstract class LoginController extends GetxController {
   login();
   goToSignUp();
   goToForgetPassword();
+  showPassword();
 }
 
 class LoginControllerImp extends LoginController {
@@ -13,6 +14,7 @@ class LoginControllerImp extends LoginController {
   late TextEditingController email;
   late TextEditingController password;
   bool isHidePassword = true;
+  @override
   showPassword() {
     isHidePassword = isHidePassword == true ? false : true;
     update();

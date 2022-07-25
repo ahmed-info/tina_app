@@ -5,6 +5,7 @@ import 'package:tina/core/constant/app_route.dart';
 abstract class SignUpController extends GetxController {
   signUp();
   goToSignIn();
+  showPassword();
 }
 
 class SignUpControllerImp extends SignUpController {
@@ -15,6 +16,7 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController phone;
   late TextEditingController password;
   bool isHidePassword = true;
+  @override
   showPassword() {
     isHidePassword = isHidePassword == true ? false : true;
     update();

@@ -20,4 +20,5 @@ class AappRoute {
   static const String privacyPolicy = '/privacyPolicy';
   static const String language = '/language';
   static const String productCart = '/productCart';
+  static const String productMarka = '/productMarka';
 }

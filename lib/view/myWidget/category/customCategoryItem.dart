@@ -16,15 +16,16 @@ class CustomCategoryItem extends StatefulWidget {
   // List<List<CustomCategoryItem>>? allSubCategory;
   final int num;
   //final String productName;
-  const CustomCategoryItem({
-    Key? key,
-    required this.categoryImgItem,
-    required this.categoryNameItem,
-    required this.num,
-    //this.allSubCategory,
-    this.listOfProduct
-    // required this.productName,
-  }) : super(key: key);
+  const CustomCategoryItem(
+      {Key? key,
+      required this.categoryImgItem,
+      required this.categoryNameItem,
+      required this.num,
+      //this.allSubCategory,
+      this.listOfProduct
+      // required this.productName,
+      })
+      : super(key: key);
 
   @override
   State<CustomCategoryItem> createState() => _CustomCategoryItemState();
@@ -42,15 +43,6 @@ class _CustomCategoryItemState extends State<CustomCategoryItem> {
             arguments: Products(
                 productName: SubCategoryModel(imgUrl: "", title: "").title,
                 num: widget.num));
-
-        ///////////////////////
-        // Navigator.of(context).push(
-        //   MaterialPageRoute(
-        //     builder: (context) =>
-        //         Products(productName: SubCategoryModel(imgUrl: "", title: "").title,
-        //         num: widget.num,),
-        //   ),
-        // );
       },
       child: Container(
         //padding: EdgeInsets.only(bottom: 150),
@@ -58,10 +50,14 @@ class _CustomCategoryItemState extends State<CustomCategoryItem> {
         height: 1900,
         alignment: Alignment.bottomCenter,
         decoration: BoxDecoration(
+          
           borderRadius: BorderRadius.circular(20),
           //color: Colors.yellow,
           image: DecorationImage(
-              image: AssetImage(widget.categoryImgItem), fit: BoxFit.cover),
+            image: AssetImage(widget.categoryImgItem, ),
+            fit: BoxFit.cover,
+            
+          ),
         ),
         child: Text(widget.categoryNameItem,
             style: Theme.of(context).textTheme.headline3),

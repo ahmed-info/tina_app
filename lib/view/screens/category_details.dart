@@ -7,6 +7,7 @@ import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
+import 'package:get/get.dart';
 
 class CategoryDetails extends StatefulWidget {
   static const String screenRoute = '/category-details';
@@ -41,46 +42,20 @@ class _CategoryDetailsState extends State<CategoryDetails> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Center(child: Text(widget.value)),
+                //Center(child: Text(Get.arguments['value'])),
                 Container(
-                  height: 13150,
-                  width: size.width - 20,
+                  height: 200,
+                  width: 200,
                   decoration: BoxDecoration(
                     color: Colors.blueGrey,
                     borderRadius: BorderRadius.circular(24),
                     image: DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage(
-                        'assets/images/category${widget.index}.png',
+                        //'assets/images/category${Get.arguments['index']}.png',
+                        'assets/images/category1.png',
                       ),
                     ),
-                  ),
-                  child: Column(
-                    children: categoryList
-                        .asMap()
-                        .map((iiii, element) => MapEntry(
-                              iiii,
-                              InkWell(
-                                onTap: () {
-                                  setState(() {
-                                    myi = iiii;
-                                    gooo = iiii;
-                                    indexpage = iiii;
-                                    //indexProduct =i;
-                                  });
-                                  // return pageController!.jumpToPage(iiii);
-                                  //return pageController. == 0;
-                                },
-                                child: CustomCategoryItem(
-                                  categoryImgItem:
-                                      'assets/images/category${iiii + 1}.png',
-                                  categoryNameItem: categoryList[iiii],
-                                  num: categoryList.length,
-                                ),
-                              ),
-                            ))
-                        .values
-                        .toList(),
                   ),
                 ),
               ],

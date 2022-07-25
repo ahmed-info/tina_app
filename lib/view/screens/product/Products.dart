@@ -12,8 +12,6 @@ class Products extends StatefulWidget {
   final int num;
   final List<CustomProductItem>? listOfProduct;
 
-  // final List<CustomCategoryItem>? allSubCategory1;
-  // final List<List<CustomCategoryItem>>? allSubCategory2;
   Products({
     Key? key,
     required this.productName,
@@ -27,16 +25,8 @@ class Products extends StatefulWidget {
 
 int? myi = 0;
 int? indexProduct = 0;
-//////////////////////////////////////////
-// List<CustomProductItem>? listOfProduct;
-// List<CustomCategoryItem>? allSubCategory1;
-// List<List<CustomCategoryItem>>? allSubCategory2;
-//////////////////////////////////////////////
-// var xx = CustomCategoryItem(
-//   num: 0,
-//   categoryNameItem: '',
-//   categoryImgItem: "",
-// ).categoryNameItem;
+
+
 
 class _ProductsState extends State<Products> {
   // ignore: prefer_final_fields
@@ -85,7 +75,6 @@ class _ProductsState extends State<Products> {
   PageController? pageController;
   @override
   void initState() {
-    //pageController = new PageController(initialPage: 0, viewportFraction: 0.95);
     super.initState();
   }
 
