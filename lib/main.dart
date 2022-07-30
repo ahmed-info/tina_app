@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tina/binding.dart';
+import 'package:tina/controller/basket_counter_controller.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
     //CartController cartController = Get.put(CartController());
     FavCounterControllerImp favCounterController =
         Get.put(FavCounterControllerImp());
+    BasketCounterControllerImp basketCounterControllerImp =
+        Get.put(BasketCounterControllerImp());
     return GetMaterialApp(
       translations: MyTranslation(),
 

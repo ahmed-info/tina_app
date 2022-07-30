@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/view/myWidget/rounded_button.dart';
+
 class AddToCart extends StatelessWidget {
+  final void Function() onTapFunc;
   const AddToCart({
     Key? key,
+    required this.onTapFunc,
   }) : super(key: key);
 
   @override
@@ -16,7 +20,7 @@ class AddToCart extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 20),
           child: InkWell(
-            onTap: () {},
+            onTap: onTapFunc,
             child: Container(
               margin: EdgeInsets.only(left: 20, top: 25),
               width: 60,

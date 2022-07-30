@@ -78,6 +78,18 @@ List<String> categoryList = [
   'Budget'.tr,
   'Gaming'.tr
 ];
+List<CustomCategoryItem> subCategoryCanonList = [
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.canon1,
+    categoryNameItem: 'Canon Brand 1',
+    num: 28,
+  ),
+  const CustomCategoryItem(
+    categoryImgItem: AppImgAsset.canon2,
+    categoryNameItem: 'Canon Brand 2',
+    num: 29,
+  )
+];
 List<CustomCategoryItem> subCategoryEpsonList = [
   const CustomCategoryItem(
     //productName: "Projector",
@@ -244,6 +256,11 @@ List<List<CustomCategoryItem>> allSubCategory = [
   subCategoryKAndFList,
   subCategoryBudgetList,
   subCategoryGamesList,
+];
+
+List<List<CustomCategoryItem>> allBrand = [
+  subCategoryEpsonList,
+  subCategoryCanonList
 ];
 //////////////End AllSub Category///////////////////////////////////
 ////////////////////////////////////////////////////

@@ -19,7 +19,9 @@ class AppImgAsset {
   static const String category5 = "$rootImages/category5.png";
   static const String category6 = "$rootImages/category6.png";
   static const String category7 = "$rootImages/category7.png";
-
+//Sub Category Canon
+static const String canon1 = "$rootImages/canon1.jpg";
+static const String canon2 = "$rootImages/canon2.jpg";
 //sub category epson
   //static const String SubCategoryEpson =
   //   "assets/images/category/subCategory/epson";

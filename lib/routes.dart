@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:tina/controller/basket_counter_controller.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
@@ -6,6 +7,7 @@ import 'package:tina/core/middleware/mymiddleware.dart';
 import 'package:tina/data/datasource/static/static.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/auth/verfiy_code_signup.dart';
+import 'package:tina/view/screens/cart_list_screen.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/favorite.dart';
 //import 'package:tina/view/screens/privacy_policy.dart';
@@ -13,6 +15,7 @@ import 'package:tina/view/screens/language.dart';
 import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/product/product_cart.dart';
 import 'package:tina/view/screens/product/product_marka.dart';
+import 'package:tina/view/screens/product/product_partner.dart';
 import 'package:tina/view/screens/product/products.dart';
 import 'package:tina/view/screens/auth/forget_password.dart';
 import 'package:tina/view/screens/auth/login.dart';
@@ -28,6 +31,8 @@ import 'package:tina/view/screens/onboarding.dart';
 import 'package:tina/view/screens/search.dart';
 
 FavCounterControllerImp favCounter = Get.put(FavCounterControllerImp());
+BasketCounterControllerImp basketController =
+    Get.put(BasketCounterControllerImp());
 List<GetPage<dynamic>>? routes = [
   GetPage(
       name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
@@ -58,6 +63,12 @@ List<GetPage<dynamic>>? routes = [
           Products(num: 0, productName: subCategoryList[indexProduct!].title)),
   GetPage(name: AappRoute.productCart, page: () => ProductCart()),
   GetPage(
+      name: AappRoute.productPartner,
+      page: () => ProductPartner(
+            productName: "hameedoo",
+            num: 3000,
+          )),
+  GetPage(
       name: AappRoute.productMarka,
       page: () => ProductMarka(
             productName: "hameed",
@@ -65,6 +76,9 @@ List<GetPage<dynamic>>? routes = [
             //listOfProduct: Get.arguments['listOfProduct'],
             listOfProduct: productInkList,
           )),
+  GetPage(
+      name: AappRoute.cartListScreen,
+      page: () => CartListScreen(basketController.basketList)),
 ];
 
 // Map<String, Widget Function(BuildContext)> routes = {

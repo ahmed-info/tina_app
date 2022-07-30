@@ -4,6 +4,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tina/core/constant/app_route.dart';
+import 'package:tina/data/datasource/static/static.dart';
 
 class Partners extends StatefulWidget {
   Partners({Key? key}) : super(key: key);
@@ -70,6 +72,7 @@ class _PartnersState extends State<Partners> {
                     onTap: () {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text("Hello you tapped at ${index + 1} ")));
+                      Get.toNamed(AappRoute.favorite);
                     },
                     onPanDown: (d) {
                       carasuelTimer?.cancel();
@@ -157,19 +160,31 @@ class _PartnersState extends State<Partners> {
                     //color: Colors.grey.shade500,
                     borderRadius: BorderRadius.circular(24)),
               ),
-              Container(
-                margin: const EdgeInsets.all(8),
-                //height image
-                height: 100,
-                width: 201,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(24),
-                  color: Colors.white,
-                  image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage(
-                        'assets/images/partner${index + 1}.png',
-                      )),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(AappRoute.productPartner, arguments: {
+                    "index": index,
+                    "listOfBrand": allBrand[index],
+                    "brandName": brandList1[index]
+                  });
+                  print("||||||||||||||||||||||" + index.toString());
+                  print(allBrand[index]);
+                  print(allBrand[index][2].categoryNameItem);
+                },
+                child: Container(
+                  margin: const EdgeInsets.all(8),
+                  //height image
+                  height: 100,
+                  width: 201,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(24),
+                    color: Colors.white,
+                    image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: AssetImage(
+                          'assets/images/partner${index + 1}.png',
+                        )),
+                  ),
                 ),
               )
             ],

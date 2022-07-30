@@ -21,4 +21,6 @@ class AappRoute {
   static const String language = '/language';
   static const String productCart = '/productCart';
   static const String productMarka = '/productMarka';
+  static const String productPartner = '/productPartner';
+  static const String cartListScreen = '/cartListScreen';
 }

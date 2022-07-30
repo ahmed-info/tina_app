@@ -6,7 +6,6 @@ import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/data/model/subCategoryModel.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 //import 'package:tina/data/datasource/static/static.dart';
-//import 'package:tina/view/myWidget/category/groupSubCategory.dart';
 import 'package:tina/view/screens/product/products.dart';
 
 class CustomCategoryItem extends StatefulWidget {
@@ -47,16 +46,20 @@ class _CustomCategoryItemState extends State<CustomCategoryItem> {
       child: Container(
         //padding: EdgeInsets.only(bottom: 150),
         width: 140,
-        height: 1900,
+        height: 100,
         alignment: Alignment.bottomCenter,
         decoration: BoxDecoration(
-          
           borderRadius: BorderRadius.circular(20),
           //color: Colors.yellow,
+          color: Colors.white,
+
           image: DecorationImage(
-            image: AssetImage(widget.categoryImgItem, ),
-            fit: BoxFit.cover,
-            
+            image: AssetImage(
+              widget.categoryImgItem,
+            ),
+
+            ///marka
+            fit: BoxFit.fitWidth,
           ),
         ),
         child: Text(widget.categoryNameItem,

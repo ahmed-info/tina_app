@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:get/get.dart';
 
 class MyNotification extends StatelessWidget {
   const MyNotification({Key? key}) : super(key: key);
@@ -15,8 +16,8 @@ class MyNotification extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Container(
-        child: const Center(
-          child: Text('صفحة الاشعارات'),
+        child: Center(
+          child: Text('Page Notification ${Get.arguments["index"]}'),
         ),
       ),
     );

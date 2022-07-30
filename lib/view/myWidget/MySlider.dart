@@ -151,8 +151,8 @@ class _MySliderState extends State<MySlider> {
                   //     ),
                   //   ),
                   // );
-                  var wz = allSubCategory[i];
-                  print(wz);
+                  //var wz = allSubCategory[i];
+                  //print(wz);
                   Get.toNamed(
                     AappRoute.productMarka,
                     arguments: {

@@ -3,10 +3,14 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tina/controller/basket_counter_controller.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
+import 'package:tina/controller/is_basket_Controller.dart';
 import 'package:tina/controller/is_fav_Controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_route.dart';
+import 'package:tina/routes.dart';
 import 'package:tina/view/myWidget/product/add_to_cart.dart';
 import 'package:tina/view/myWidget/product/build_button.dart';
 
@@ -23,8 +27,12 @@ class _ProductCartState extends State<ProductCart> {
   @override
   Widget build(BuildContext context) {
     FavCounterControllerImp favCounterController = Get.find();
+    BasketCounterControllerImp basketCounterController = Get.find();
+    //BasketCounterControllerImp basketControll =
+    //    Get.put(BasketCounterControllerImp());
     IsFavControllerImp isFavControllerImp = Get.put(IsFavControllerImp());
-    // FavCounterControllerImp favController = Get.put(FavCounterControllerImp());
+    IsBasketControllerImp isBasketControllerImp =
+        Get.put(IsBasketControllerImp());
     Size size = MediaQuery.of(context).size;
     var amount = Get.arguments['productPrice'].toString();
     CartController cartController = Get.put(CartController());
@@ -45,6 +53,9 @@ class _ProductCartState extends State<ProductCart> {
           ),
           actions: [
             InkWell(
+              onTap: () {
+                favCounterController.goToFavoritePage();
+              },
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Badge(
@@ -55,20 +66,23 @@ class _ProductCartState extends State<ProductCart> {
                         )),
                     child: Icon(Icons.favorite)),
               ),
-              onTap: () {
-                favCounterController.goToFavoritePage();
-              },
             ),
-            Padding(
-              padding: EdgeInsets.only(right: 20),
-              child: Badge(
-                  padding: EdgeInsets.only(left: 5, right: 5, bottom: 10),
-                  badgeColor: Colors.blue,
-                  badgeContent: Text(
-                    "0",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  child: Icon(Icons.shopping_cart)),
+            InkWell(
+              onTap: () {
+                //basketControll.goToBasketPage();
+                Get.toNamed(AappRoute.cartListScreen);
+              },
+              child: Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Badge(
+                    padding: EdgeInsets.only(left: 5, right: 5, bottom: 10),
+                    badgeColor: Colors.blue,
+                    badgeContent: Text(
+                      "0",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    child: Icon(Icons.shopping_cart)),
+              ),
             ),
           ],
         ),
@@ -150,7 +164,19 @@ class _ProductCartState extends State<ProductCart> {
                                 ),
                               )
                             : Container(),
-                        AddToCart(),
+                        AddToCart(
+                          onTapFunc: () {
+                            if (isBasketControllerImp.isBasket.value == false) {
+                              isBasketControllerImp.isBasket.value = true;
+                              basketCounterController.addBasketItemToList();
+                            } else {
+                              Get.snackbar(
+                                  "Added".tr,
+                                  "It has already been added to your Basket"
+                                      .tr);
+                            }
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -160,25 +186,26 @@ class _ProductCartState extends State<ProductCart> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         BuildButton(
-                          icon: Icons.add,
-                          onPressed: () {
-                            cartController.addItem();
-                          },
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            child: Obx(
-                              () => Text(
-                                cartController.numOfItems
-                                    .toString()
-                                    .padLeft(2, "0"),
-                                style: Theme.of(context).textTheme.headline1,
-                              ),
-                            )),
-                        BuildButton(
                           icon: Icons.remove,
                           onPressed: () {
                             cartController.removeItem();
+                          },
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Obx(
+                            () => Text(
+                              cartController.numOfItems
+                                  .toString()
+                                  .padLeft(2, "0"),
+                              style: Theme.of(context).textTheme.headline1,
+                            ),
+                          ),
+                        ),
+                        BuildButton(
+                          icon: Icons.add,
+                          onPressed: () {
+                            cartController.addItem();
                           },
                         ),
                         InkWell(

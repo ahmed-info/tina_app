@@ -7,7 +7,6 @@ import 'package:tina/core/services/services.dart';
 class LocaleController extends GetxController {
   Locale? language;
   MyServices myServices = Get.find();
-  //FavCounterControllerImp favController = Get.find();
   ThemeData appTheme = themeEnglish;
   changeLang(String langCode) {
     Locale locale = Locale(langCode);

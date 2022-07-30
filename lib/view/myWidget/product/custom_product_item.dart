@@ -40,7 +40,7 @@ class CustomProductItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             color: Colors.white,
             image: DecorationImage(
-                image: AssetImage(productImg), fit: BoxFit.scaleDown),
+                image: AssetImage(productImg), fit: BoxFit.contain),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
