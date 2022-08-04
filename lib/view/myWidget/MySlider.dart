@@ -85,13 +85,7 @@ class _MySliderState extends State<MySlider> {
                     categoryList.length,
                     (index) => GestureDetector(
                           onTap: () {
-                            // Navigator.of(context).push(
-                            //   MaterialPageRoute(
-                            //     builder: (context) => CategoryDetails(
-                            //         value: '${categoryList[index]}',
-                            //         index: index + 1),
-                            //   ),
-                            // );
+                        
 
                             Get.toNamed(AappRoute.productMarka, arguments: {
                               "value": '${categoryList[i]}',
@@ -232,6 +226,10 @@ class _MySliderState extends State<MySlider> {
                                 )
                               ],
                             ),
+
+
+
+                            
                             Container(
                               margin: EdgeInsets.all(8),
                               decoration: BoxDecoration(

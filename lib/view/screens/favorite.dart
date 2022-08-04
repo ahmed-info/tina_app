@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/product/Products.dart';
-
+import 'package:get/get.dart';
 class Favorite extends StatelessWidget {
   //const FavoratesScreen({Key key}) : super(key: key);
   final List<CustomProductItem> favProducts;
@@ -13,7 +13,7 @@ class Favorite extends StatelessWidget {
     if (favProducts.isEmpty) {
       return Scaffold(
         body: Center(
-          child: Text('ليس لديك اي من منتجات المفضلة'),
+          child: Text('You dont have any favorite products'.tr),
         ),
       );
     } else {

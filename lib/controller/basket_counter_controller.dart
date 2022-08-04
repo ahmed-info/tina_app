@@ -1,9 +1,11 @@
 // ignore_for_file: iterable_contains_unrelated_type
 
 import 'package:get/get.dart';
+import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
+import 'package:tina/view/screens/product/product_cart.dart';
 
 abstract class BasketCounterController extends GetxController {
   //final List<CustomProductItem> listOfProduct;
@@ -15,7 +17,7 @@ abstract class BasketCounterController extends GetxController {
 class BasketCounterControllerImp extends BasketCounterController {
   var numOfItems = 0.obs;
   var basketList = <CustomProductItem>[].obs;
-  var isBasket= false.obs;
+  var isBasket = false.obs;
   @override
   void addBasketItemToList() {
     if (!isBasket.value) {
@@ -24,6 +26,8 @@ class BasketCounterControllerImp extends BasketCounterController {
         productName: Get.arguments["productName"],
         productImg: Get.arguments["productImg"],
         productPrice: Get.arguments["productPrice"],
+        productQty: qtyNum,
+        //productQty: numOfItems.toInt(),
       ));
 
       numOfItems++;

@@ -14,7 +14,7 @@ class VerfiyCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     VerfiyCodeControllerImp controller = Get.put(VerfiyCodeControllerImp());
-    String email = 'ahmed.razzaq.yahya@gmail.com';
+    String email = 'E-mail';
     return Scaffold(
       //drawer: Drawer(),
       appBar: AppBar(

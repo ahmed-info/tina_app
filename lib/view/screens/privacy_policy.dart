@@ -35,7 +35,7 @@ class PrivacyPolicy extends StatelessWidget {
             height: 300,
             width: size.width,
             child: Text(
-              "مرحبا بكم في شركة التينة للالكترونيات",
+              "privacy policy description".tr,
               style: TextStyle(color: Colors.white),
             ),
           ),

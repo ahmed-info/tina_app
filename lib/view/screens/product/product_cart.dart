@@ -20,7 +20,7 @@ class ProductCart extends StatefulWidget {
   @override
   State<ProductCart> createState() => _ProductCartState();
 }
-
+var qtyNum =0;
 class _ProductCartState extends State<ProductCart> {
   //int itemCount = 1;
   //bool isFav = false;
@@ -70,16 +70,20 @@ class _ProductCartState extends State<ProductCart> {
             InkWell(
               onTap: () {
                 //basketControll.goToBasketPage();
-                Get.toNamed(AappRoute.cartListScreen);
+                Get.toNamed(AappRoute.cartListScreen, arguments: {
+                  "productImg": Get.arguments['productImg'],
+                });
               },
               child: Padding(
                 padding: EdgeInsets.only(right: 20),
                 child: Badge(
                     padding: EdgeInsets.only(left: 5, right: 5, bottom: 10),
                     badgeColor: Colors.blue,
-                    badgeContent: Text(
-                      "0",
-                      style: TextStyle(color: Colors.white),
+                    badgeContent: Obx(
+                      () => Text(
+                        basketCounterController.numOfItems.value.toString(),
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                     child: Icon(Icons.shopping_cart)),
               ),
@@ -195,7 +199,7 @@ class _ProductCartState extends State<ProductCart> {
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Obx(
                             () => Text(
-                              cartController.numOfItems
+                            cartController.numOfItems
                                   .toString()
                                   .padLeft(2, "0"),
                               style: Theme.of(context).textTheme.headline1,

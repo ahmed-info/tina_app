@@ -13,6 +13,10 @@ ThemeData themeEnglish = ThemeData(
         fontSize: 26, color: AppColor.black, fontWeight: FontWeight.bold),
     headline3: TextStyle(
         fontSize: 12, color: AppColor.black, fontWeight: FontWeight.bold),
+    headline4: TextStyle(
+        fontSize: 14, color: Colors.amber, fontWeight: FontWeight.bold),
+    headline5: TextStyle(
+        fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
     bodyText1: TextStyle(
         height: 2,
         color: AppColor.grey,
@@ -32,6 +36,10 @@ ThemeData themeArabic = ThemeData(
         fontSize: 26, color: AppColor.black, fontWeight: FontWeight.bold),
     headline3: TextStyle(
         fontSize: 12, color: AppColor.black, fontWeight: FontWeight.bold),
+    headline4: TextStyle(
+        fontSize: 14, color: Colors.amber, fontWeight: FontWeight.bold),
+    headline5: TextStyle(
+        fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold),
     bodyText1: TextStyle(
         height: 2,
         color: AppColor.grey,

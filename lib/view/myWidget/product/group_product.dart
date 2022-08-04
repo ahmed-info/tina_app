@@ -16,7 +16,7 @@ class GroupProduct extends StatelessWidget {
     return SingleChildScrollView(
       physics: const NeverScrollableScrollPhysics(),
       child: Container(
-        height: 650,
+        height: 600,
         child: GridView.count(
           crossAxisCount: 2,
           scrollDirection: Axis.vertical,

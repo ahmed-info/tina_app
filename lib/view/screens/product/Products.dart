@@ -26,8 +26,6 @@ class Products extends StatefulWidget {
 int? myi = 0;
 int? indexProduct = 0;
 
-
-
 class _ProductsState extends State<Products> {
   // ignore: prefer_final_fields
   List allGroupProduct = [
@@ -94,9 +92,9 @@ class _ProductsState extends State<Products> {
         scrollDirection: Axis.vertical,
         child: Container(
           width: size.width,
-          height: 2010,
+          height: 2060,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
@@ -109,9 +107,10 @@ class _ProductsState extends State<Products> {
                 ).categoryNameItem),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10),
+                margin: EdgeInsets.only(top: 10, bottom: 100),
+                padding: EdgeInsets.only(bottom: 50),
                 width: 350,
-                height: 2000,
+                height: size.height,
                 child: PageView.builder(
                   allowImplicitScrolling: true,
                   scrollDirection: Axis.horizontal,

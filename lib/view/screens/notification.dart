@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/app_color.dart';
@@ -17,7 +17,7 @@ class MyNotification extends StatelessWidget {
       ),
       body: Container(
         child: Center(
-          child: Text('Page Notification ${Get.arguments["index"]}'),
+          child: Text('There are no notifications'.tr),
         ),
       ),
     );

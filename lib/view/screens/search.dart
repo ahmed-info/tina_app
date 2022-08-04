@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:get/get.dart';
+
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);
 
@@ -14,8 +16,8 @@ class Search extends StatelessWidget {
         elevation: 0.0,
       ),
       body: Container(
-        child: const Center(
-          child: Text('لا توجد نتائج للبحث'),
+        child: Center(
+          child: Text('There are no search results'.tr),
         ),
       ),
     );

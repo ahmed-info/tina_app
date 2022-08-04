@@ -72,6 +72,14 @@ class MyTranslation extends Translations {
               'قم بالتسجيل باستخدام بريدك الإلكتروني وكلمة المرور أو باستخدام وسائل التواصل الاجتماعي',
           'Cart': 'عربة التسوق',
           'Privacy & Policy': 'السياسة والخصوصية',
+          'There are no notifications': 'لا توجد اشعارات',
+          'privacy policy description':
+              'تعتبر شركة التينة من الشركات الرائدة في مجال بيع وتوريد المواد الإلكترونية ، ومن أكبر وأعرق الشركات في سوق التعامل في العراق ، والمتخصصة في جميع مجالات الحلول المكتبية ، والتي بدأت منذ تسعينيات القرن الماضي. القرن الماضي حتى اليوم. إنها علامة تجارية معروفة في مجالها ومصدر ثقة مع جميع عملائها في هذا المجال. سواء كانت مؤسسات حكومية أو شركات خاصة أو مع جميع المنظمات',
+          'You do not have any products in the basket':
+              'ليس لديك اي منتجات بالسلة',
+          'You dont have any favorite products': 'ليس لديك اي منتجات بالمفضلة',
+          'cart page': 'صفحة سلة التسوق',
+          'There are no search results': 'لا توجد نتائج للبحث'
         },
         "en": {
           "Settings": "Settings",
@@ -143,6 +151,15 @@ class MyTranslation extends Translations {
               'Sign Up With Your Email And Password OR With Social Media',
           'Cart': 'Cart',
           'Privacy & Policy': 'Privacy & Policy',
+          'There are no notifications': 'There are no notifications',
+          'privacy policy description':
+              'Al-Tina Company is one of the leading companies in the field of selling and supplying electronic materials, among the largest and oldest companies in the dealing market in Iraq, specialized in all areas of office solutions, which had its beginning from the nineties of the last century until today. It is a well-known brand in its field and a source of trust with all its clients in this field. Whether it is government institutions, private companies, or with all organizations',
+          'You do not have any products in the basket':
+              'You do not have any products in the basket',
+          'You dont have any favorite products':
+              'You dont have any favorite products',
+          'cart page': 'cart page',
+          'There are no search results': 'There are no search results'
         },
       };
 }

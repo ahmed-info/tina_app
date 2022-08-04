@@ -3,25 +3,31 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tina/controller/basket_counter_controller.dart';
+import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/routes.dart';
 import 'package:tina/view/myWidget/avatar_and_alert.dart';
 import 'package:tina/view/myWidget/BigText.dart';
 import 'package:tina/view/myWidget/MySlider.dart';
 import 'package:tina/view/myWidget/Partners.dart';
 import 'package:tina/view/myWidget/Text_searchBar.dart';
+import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/app_drawer.dart';
 import 'package:tina/view/screens/cart.dart';
+import 'package:tina/view/screens/cart_list_screen.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/contact_us.dart';
 
 class MyHome extends StatefulWidget {
   MyHome({Key? key}) : super(key: key);
-
   @override
   State<MyHome> createState() => _MyHomeState();
 }
 
 class _MyHomeState extends State<MyHome> {
+  List<CustomProductItem>? listOfProduct;
+
   int currentIndex = 0;
   List listOfTabs = [
     SingleChildScrollView(
@@ -44,6 +50,7 @@ class _MyHomeState extends State<MyHome> {
       index: 0,
       myName: "".tr,
     ),
+    // CartListScreen(basketController.basketList.toList()),
     const Cart(),
     ContactUs(),
   ];
@@ -58,7 +65,10 @@ class _MyHomeState extends State<MyHome> {
           foregroundColor: AppColor.secondaryColor,
           centerTitle: true,
           actions: [
-            AvatarAndAlert(),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 40),
+              child: AvatarAndAlert(),
+            ),
           ],
           //backgroundColor: Colors.red,
           elevation: 0.0,

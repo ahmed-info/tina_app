@@ -15,10 +15,9 @@ class AvatarAndAlert extends StatefulWidget {
 class _AvatarAndAlertState extends State<AvatarAndAlert> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 65),
+    return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         //mainAxisSize: MainAxisSize.max,
         children: [
           Container(
@@ -32,11 +31,11 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
                   ),
                 )),
           ),
-          // SizedBox(
-          //   width: 20,
-          // ),
+          SizedBox(
+            width: 40,
+          ),
           Container(
-            child:  Text(
+            child: Text(
               'Tina Shop'.tr,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -44,11 +43,11 @@ class _AvatarAndAlertState extends State<AvatarAndAlert> {
                   color: Color(0xff025c1f)),
             ),
           ),
-          // SizedBox(
-          //   width: 20,
-          // ),
+          SizedBox(
+            width: 45,
+          ),
           Container(
-            padding: const EdgeInsets.only(left: 30),
+            //padding: const EdgeInsets.only(left: 30),
             margin: const EdgeInsets.only(bottom: 12),
             child: Stack(
               children: [
