@@ -1,6 +1,20 @@
 // ignore_for_file: must_be_immutable, file_names, prefer_const_constructors
 
-import 'package:flutter/material.dart' show BuildContext, Color, EdgeInsets, FontWeight, Key, MainAxisAlignment, Padding, Row, StatelessWidget, Text, TextAlign, TextStyle, Widget;
+import 'package:flutter/material.dart'
+    show
+        BuildContext,
+        Color,
+        EdgeInsets,
+        FontWeight,
+        Key,
+        MainAxisAlignment,
+        Padding,
+        Row,
+        StatelessWidget,
+        Text,
+        TextAlign,
+        TextStyle,
+        Widget;
 
 class BigText extends StatelessWidget {
   final String text;
@@ -14,7 +28,7 @@ class BigText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, top: 10),
+      padding: const EdgeInsets.only(left: 25, top: 10, right: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

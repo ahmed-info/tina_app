@@ -10,7 +10,6 @@ import 'package:tina/controller/is_fav_Controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/core/constant/app_route.dart';
-import 'package:tina/routes.dart';
 import 'package:tina/view/myWidget/product/add_to_cart.dart';
 import 'package:tina/view/myWidget/product/build_button.dart';
 

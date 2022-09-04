@@ -4,6 +4,9 @@ class MyTranslation extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         "ar": {
+          "Phone Number Or Email Already Exists":"رقم الهاتف او البريد الالكتروني موجود",
+          "Warning":"تحذير",
+          "Error":"خطأ",
           "Choose Language": "اختر اللغة",
           "Settings": "الاعدادات",
           "language": "العربية",
@@ -79,9 +82,16 @@ class MyTranslation extends Translations {
               'ليس لديك اي منتجات بالسلة',
           'You dont have any favorite products': 'ليس لديك اي منتجات بالمفضلة',
           'cart page': 'صفحة سلة التسوق',
-          'There are no search results': 'لا توجد نتائج للبحث'
+          'There are no search results': 'لا توجد نتائج للبحث',
+          'Choose Product':'اختر المنتج',
+          'You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop':'لديك اكثر من 2000 منتج \n اختر منتجك من منتجاتنا\n متجر التجارة الالكترونية',
+          'Easy And Safe Payment':'دفع سهل وآمن',
+          'Track Your Order':'اتبع طلبك'
         },
         "en": {
+          "Phone Number Or Email Already Exists":"Phone Number Or Email Already Exists",
+          "Warning":"Warning",
+          "Error":"Error",
           "Settings": "Settings",
           "Choose Language": "Choose Language",
           "language": "English",
@@ -159,7 +169,10 @@ class MyTranslation extends Translations {
           'You dont have any favorite products':
               'You dont have any favorite products',
           'cart page': 'cart page',
-          'There are no search results': 'There are no search results'
+          'There are no search results': 'There are no search results',
+          'Choose Product':'Choose Product',
+          'You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop':'You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop',
+          'Track Your Order':'Track Your Order'
         },
       };
 }

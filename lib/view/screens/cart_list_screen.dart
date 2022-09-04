@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, unused_local_variable
 
 import 'package:flutter/material.dart';
-import 'package:tina/controller/basket_counter_controller.dart';
 import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
-import 'package:tina/view/screens/product/Products.dart';
 import 'package:get/get.dart';
 import 'package:tina/view/screens/product/product_cart.dart';
 

@@ -23,4 +23,5 @@ class AappRoute {
   static const String productMarka = '/productMarka';
   static const String productPartner = '/productPartner';
   static const String cartListScreen = '/cartListScreen';
+  static const String dashboard = '/dashboard';
 }

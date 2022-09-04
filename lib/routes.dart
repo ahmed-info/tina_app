@@ -1,16 +1,15 @@
 import 'package:get/get.dart';
 import 'package:tina/controller/basket_counter_controller.dart';
 import 'package:tina/controller/fav_counter_controller.dart';
-import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/core/middleware/mymiddleware.dart';
 import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/view/myWidget/product/custom_product_item.dart';
+import 'package:tina/testPackage.dart';
+import 'package:tina/test_view.dart';
 import 'package:tina/view/screens/auth/verfiy_code_signup.dart';
 import 'package:tina/view/screens/cart_list_screen.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/favorite.dart';
-//import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/language.dart';
 import 'package:tina/view/screens/privacy_policy.dart';
 import 'package:tina/view/screens/product/product_cart.dart';
@@ -34,8 +33,9 @@ FavCounterControllerImp favCounter = Get.put(FavCounterControllerImp());
 BasketCounterControllerImp basketController =
     Get.put(BasketCounterControllerImp());
 List<GetPage<dynamic>>? routes = [
-  GetPage(
-      name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
+  // GetPage(
+  //     name: "/", page: () => const Language(), middlewares: [MyMiddleWare()]),
+  GetPage(name: "/", page: () => const SignUp()),
   GetPage(name: AappRoute.login, page: () => const Login()),
   GetPage(name: AappRoute.signUp, page: () => const SignUp()),
   GetPage(name: AappRoute.forgetPassword, page: () => const ForgetPassword()),
@@ -80,34 +80,3 @@ List<GetPage<dynamic>>? routes = [
       name: AappRoute.cartListScreen,
       page: () => CartListScreen(basketController.basketList)),
 ];
-
-// Map<String, Widget Function(BuildContext)> routes = {
-//   AappRoute.mynotifcation: (context) => const MyNotification(),
-//   AappRoute.search: (context) => const Search(),
-//   AappRoute.categoryDetails: (context) => CategoryDetails(),
-//   AappRoute.home: (context) => MyHome(),
-//   AappRoute.language: (context) => const Language(),
-//   AappRoute.privacyPolicy: (context) => const PrivacyPolicy(),
-//   AappRoute.categories: (context) => Categories(
-//         index: 0,
-//         myName: "",
-//       ),
-// //   //Auth
-//   AappRoute.login: (context) => const Login(),
-//   AappRoute.signUp: (context) => const SignUp(),
-//   AappRoute.forgetPassword: (context) => const ForgetPassword(),
-//   AappRoute.verfiyCode: (context) => const VerfiyCode(),
-//   AappRoute.verfiyCodeSignUp: (context) => const VerfiyCodeSignUp(),
-//   AappRoute.resetPassword: (context) => const ResetPassword(),
-//   AappRoute.successSignUp: (context) => const SuccessSignUp(),
-//   AappRoute.sucessResetPassword: (context) => const SuccessResetPassword(),
-//   AappRoute.favorite: (context) => const Favorite(),
-//   AappRoute.productCart: (context) => ProductCart(),
-// //onboarding
-//   AappRoute.onBoarding: (context) => const OnBoarding(),
-//   //product
-//   AappRoute.products: (context) => Products(
-//         num: 0,
-//         productName: subCategoryList[indexProduct!].title,
-//       ),
-// };

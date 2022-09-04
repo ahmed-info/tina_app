@@ -1,8 +1,7 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
-import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/view/myWidget/rounded_button.dart';
 
 class AddToCart extends StatelessWidget {

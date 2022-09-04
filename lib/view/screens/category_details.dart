@@ -1,13 +1,9 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_typing_uninitialized_variables
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_typing_uninitialized_variables, unused_local_variable, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 //import 'package:get/get.dart';
 import 'package:tina/core/constant/app_color.dart';
-import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/view/myWidget/category/customCategoryItem.dart';
-import 'package:tina/view/myWidget/category/customMainCategory.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
-import 'package:get/get.dart';
 
 class CategoryDetails extends StatefulWidget {
   static const String screenRoute = '/category-details';

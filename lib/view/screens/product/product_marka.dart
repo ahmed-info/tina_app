@@ -1,14 +1,10 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, file_names
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_unnecessary_containers, file_names, unused_local_variable, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/controller/product_marka_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
-import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
-import 'package:tina/view/myWidget/product/group_product.dart';
-import 'package:tina/view/screens/product/products.dart';
 
 class ProductMarka extends StatefulWidget {
   final String productName;

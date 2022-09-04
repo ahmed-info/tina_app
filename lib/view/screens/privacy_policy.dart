@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, file_names, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/app_color.dart';

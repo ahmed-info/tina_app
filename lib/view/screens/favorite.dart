@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
-import 'package:tina/view/screens/product/Products.dart';
 import 'package:get/get.dart';
 class Favorite extends StatelessWidget {
   //const FavoratesScreen({Key key}) : super(key: key);

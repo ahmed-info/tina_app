@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables, file_names, avoid_unnecessary_containers, prefer_const_constructors_in_immutables, non_constant_identifier_names
+// ignore_for_file: unnecessary_string_interpolations, prefer_const_literals_to_create_immutables, file_names, avoid_unnecessary_containers, prefer_const_constructors_in_immutables, non_constant_identifier_names, avoid_print
 
 import 'dart:async';
 

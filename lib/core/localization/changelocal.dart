@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/fav_counter_controller.dart';
 import 'package:tina/core/constant/app_theme.dart';
 import 'package:tina/core/services/services.dart';
 

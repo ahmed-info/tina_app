@@ -2,8 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/auth/reset_password_controller.dart';
+import 'package:lottie/lottie.dart';
+import 'package:tina/controller/forgetpassword/reset_password_controller.dart';
+import 'package:tina/core/classes/status_request.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/functions/valid_input.dart';
 import 'package:tina/view/myWidget/auth/customButtonAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextBodyAuth.dart';
@@ -15,11 +18,8 @@ class ResetPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ResetPasswordControllerImp controller =
-        Get.put(ResetPasswordControllerImp());
-
+    Get.put(ResetPasswordControllerImp());
     return Scaffold(
-      //drawer: Drawer(),
       appBar: AppBar(
         foregroundColor: AppColor.primaryColor,
         centerTitle: true,
@@ -31,47 +31,56 @@ class ResetPassword extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-        child: ListView(
-          children: [
-            CustomTextTitleAuth(text: "New Password"),
-            SizedBox(height: 10),
-            CustomTextBodyAuth(text: 'Please Enter New Password'),
-            SizedBox(
-              height: 15,
-            ),
-            CustomTextFormAuth(
-              valid: (val) {
-                return validInput(val!, 5, 30, "password");
-              },
-              obscureText: true,
-              myController: controller.password,
-              hinttext: "Enter Your Password",
-              icontext: "Password",
-              iconData: Icons.lock_clock_outlined,
-            ),
-            CustomTextFormAuth(
-                valid: (val) {
-                  return validInput(val!, 5, 30, "password");
-                },
-                obscureText: true,
-                myController: controller.repassword,
-                hinttext: "Re Enter Your Password",
-                icontext: "Re Password",
-                iconData: Icons.lock_clock_outlined),
-            CustomButtonAuth(
-              text: "Save",
-              onPressed: () {
-                controller.goToSuccessResetPassword();
-              },
-            ),
-            SizedBox(
-              height: 30,
-            ),
-          ],
-        ),
-      ),
+      body: GetBuilder<ResetPasswordControllerImp>(builder: (controller) {
+        return controller.statusRequest == StatusRequest.loading
+            ? Center(
+                child: Lottie.asset(AppImgAsset.loading),
+              )
+            : Container(
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                child: Form(
+                  key: controller.formState,
+                  child: ListView(
+                    children: [
+                      CustomTextTitleAuth(text: "New Password"),
+                      SizedBox(height: 10),
+                      CustomTextBodyAuth(text: 'Please Enter New Password'),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      CustomTextFormAuth(
+                        valid: (val) {
+                          return validInput(val!, 5, 30, "password");
+                        },
+                        obscureText: true,
+                        myController: controller.password,
+                        hinttext: "Enter Your Password",
+                        icontext: "Password",
+                        iconData: Icons.lock_clock_outlined,
+                      ),
+                      CustomTextFormAuth(
+                          valid: (val) {
+                            return validInput(val!, 5, 30, "password");
+                          },
+                          obscureText: true,
+                          myController: controller.repassword,
+                          hinttext: "Re Enter Your Password",
+                          icontext: "Re Password",
+                          iconData: Icons.lock_clock_outlined),
+                      CustomButtonAuth(
+                        text: "Save",
+                        onPressed: () {
+                          controller.goToSuccessResetPassword();
+                        },
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                    ],
+                  ),
+                ),
+              );
+      }),
     );
   }
 }

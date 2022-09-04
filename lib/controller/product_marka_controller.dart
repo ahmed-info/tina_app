@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, unnecessary_overrides
+
 import 'package:get/get.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/data/datasource/static/static.dart';

@@ -2,6 +2,7 @@
 
 class AppImgAsset {
   static const String rootImages = "assets/images";
+  static const String rootLottie = "assets/lottie";
   static const String rootSubCategory = "assets/images/category/subCategory";
   //logo
   static const String logoTina = "$rootImages/logoTina.jpg";
@@ -243,5 +244,11 @@ static const String canon2 = "$rootImages/canon2.jpg";
   //product Chair
     static const String chairGaming1 = "$rootImages/chairGaming1.png";
     static const String chairGaming2 = "$rootImages/chairGaming2.png";
+
+//image json
+    static const String loading = "$rootLottie/loading.json";
+    static const String nodata = "$rootLottie/nodata.json";
+    static const String offline = "$rootLottie/offline.json";
+    static const String failure = "$rootLottie/failure.json";
 
 }

@@ -1,8 +1,6 @@
-// ignore_for_file: iterable_contains_unrelated_type
+// ignore_for_file: iterable_contains_unrelated_type, override_on_non_overriding_member
 
 import 'package:get/get.dart';
-import 'package:tina/controller/product_cart_controller.dart';
-import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/product/product_cart.dart';

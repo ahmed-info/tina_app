@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:path/path.dart';
 import 'package:tina/controller/auth/login_controller.dart';
+import 'package:tina/core/classes/status_request.dart';
 import 'package:tina/core/constant/app_color.dart';
+import 'package:tina/core/constant/app_img_asset.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/core/functions/alert_exit_app.dart';
 import 'package:tina/core/functions/valid_input.dart';
@@ -36,75 +39,82 @@ class Login extends StatelessWidget {
       ),
       body: WillPopScope(
         onWillPop: alertExitApp,
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-          child: Form(
-            key: controller.formState,
-            child: ListView(
-              children: [
-                LogoAuth(),
-                CustomTextTitleAuth(text: "Welcome Back".tr),
-                SizedBox(height: 10),
-                CustomTextBodyAuth(
-                    text:
-                        'Sign In With Your Email And Password OR With Social Media'.tr),
-                SizedBox(
-                  height: 15,
-                ),
-                CustomTextFormAuth(
-                    valid: (val) {
-                      return validInput(val!, 5, 100, "email");
-                    },
-                    myController: controller.email,
-                    hinttext: "Enter Your Email".tr,
-                    icontext: "Email".tr,
-                    iconData: Icons.email_outlined),
-                GetBuilder<LoginControllerImp>(
-                  builder: (context) => CustomTextFormAuth(
-                    valid: (val) {
-                      return validInput(val!, 5, 30, "password");
-                    },
-                    myController: controller.password,
-                    hinttext: "Enter Your Password".tr,
-                    icontext: "Password".tr,
-                    iconData: controller.isHidePassword
-                        ? Icons.visibility_off_outlined
-                        : Icons.visibility_outlined,
-                    obscureText: controller.isHidePassword,
-                    onTapIcon: () {
-                      controller.showPassword();
-                    },
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    controller.goToForgetPassword();
-                  },
-                  child: Text(
-                    'Forget Password'.tr,
-                    textAlign: TextAlign.end,
-                  ),
-                ),
-                CustomButtonAuth(
-                  text: "Sign In".tr,
-                  onPressed: () {
-                    controller.login();
-                  },
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                CustomTextSign(
-                  textOne: "Dont have an account ? ".tr,
-                  textTwo: "SignUp".tr,
-                  onTap: () {
-                    controller.goToSignUp();
-                  },
+        child: GetBuilder<LoginControllerImp>(builder: (control) {
+          return control.statusRequest == StatusRequest.loading
+              ? Center(
+                  child: Lottie.asset(AppImgAsset.loading),
                 )
-              ],
-            ),
-          ),
-        ),
+              : Container(
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                  child: Form(
+                    key: controller.formState,
+                    child: ListView(
+                      children: [
+                        LogoAuth(),
+                        CustomTextTitleAuth(text: "Welcome Back".tr),
+                        SizedBox(height: 10),
+                        CustomTextBodyAuth(
+                            text:
+                                'Sign In With Your Email And Password OR With Social Media'
+                                    .tr),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        CustomTextFormAuth(
+                            valid: (val) {
+                              return validInput(val!, 5, 100, "email");
+                            },
+                            myController: controller.email,
+                            hinttext: "Enter Your Email".tr,
+                            icontext: "Email".tr,
+                            iconData: Icons.email_outlined),
+                        GetBuilder<LoginControllerImp>(
+                          builder: (context) => CustomTextFormAuth(
+                            valid: (val) {
+                              return validInput(val!, 5, 30, "password");
+                            },
+                            myController: controller.password,
+                            hinttext: "Enter Your Password".tr,
+                            icontext: "Password".tr,
+                            iconData: controller.isHidePassword
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            obscureText: controller.isHidePassword,
+                            onTapIcon: () {
+                              controller.showPassword();
+                            },
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            controller.goToForgetPassword();
+                          },
+                          child: Text(
+                            'Forget Password'.tr,
+                            textAlign: TextAlign.end,
+                          ),
+                        ),
+                        CustomButtonAuth(
+                          text: "Sign In".tr,
+                          onPressed: () {
+                            controller.login();
+                          },
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        CustomTextSign(
+                          textOne: "Dont have an account ? ".tr,
+                          textTwo: "SignUp".tr,
+                          onTap: () {
+                            controller.goToSignUp();
+                          },
+                        )
+                      ],
+                    ),
+                  ),
+                );
+        }),
       ),
     );
   }

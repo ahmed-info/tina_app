@@ -1,12 +1,9 @@
-// ignore_for_file: prefer_const_constructors_in_immutables
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/basket_counter_controller.dart';
-import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
-import 'package:tina/routes.dart';
 import 'package:tina/view/myWidget/avatar_and_alert.dart';
 import 'package:tina/view/myWidget/BigText.dart';
 import 'package:tina/view/myWidget/MySlider.dart';
@@ -15,7 +12,6 @@ import 'package:tina/view/myWidget/Text_searchBar.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/screens/app_drawer.dart';
 import 'package:tina/view/screens/cart.dart';
-import 'package:tina/view/screens/cart_list_screen.dart';
 import 'package:tina/view/screens/categories.dart';
 import 'package:tina/view/screens/contact_us.dart';
 

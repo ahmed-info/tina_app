@@ -1,4 +1,5 @@
-// ignore_for_file: sized_box_for_whitespace
+
+// ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

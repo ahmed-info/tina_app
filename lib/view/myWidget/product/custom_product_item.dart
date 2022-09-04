@@ -1,11 +1,9 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/product_cart_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/core/constant/app_route.dart';
-import 'package:tina/view/screens/product/product_cart.dart';
 
 class CustomProductItem extends StatelessWidget {
   final String productName;

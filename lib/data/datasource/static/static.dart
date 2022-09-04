@@ -7,19 +7,19 @@ import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
-      title: "Choose Product",
+      title: "Choose Product".tr,
       body:
-          "We Have a 100k Product, Choose \n Your Product From Our \n E-commerce Shop",
+          "You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop".tr,
       image: AppImgAsset.onBoardingImg1),
   OnBoardingModel(
-      title: "Easy And Safe Payment",
+      title: "Easy And Safe Payment".tr,
       body:
-          "We Have a 100k Product, Choose \n Your Product From Our \n E-commerce Shop",
+          "You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop".tr,
       image: AppImgAsset.onBoardingImg2),
   OnBoardingModel(
-      title: "Track Your Order",
+      title: "Track Your Order".tr,
       body:
-          "We Have a 100k Product, Choose \n Your Product From Our \n E-commerce Shop",
+          "You have more than 2000 products \n, Choose Your Product From Our \n E-commerce Shop".tr,
       image: AppImgAsset.onBoardingImg3),
 ];
 
@@ -896,7 +896,7 @@ List<CustomProductItem> productUPsBattery = [
 ];
 List<CustomProductItem> productUPsAccessory = [
   const CustomProductItem(
-    productImg: 'Soon',
+    productImg: AppImgAsset.upsAccessories,
     productName: "Soon",
     //productPrice: 1600,
     num: 1015,

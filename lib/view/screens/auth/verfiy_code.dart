@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import 'package:tina/controller/auth/verfiy_code_controller.dart';
+import 'package:tina/controller/forgetpassword/verfiy_code_controller.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/view/myWidget/auth/customTextBodyAuth.dart';
 import 'package:tina/view/myWidget/auth/customTextTitleAuth.dart';
@@ -52,7 +52,7 @@ class VerfiyCode extends StatelessWidget {
               },
               //runs when every textfield is filled
               onSubmit: (String verificationCode) {
-                controller.goToResetPassword();
+                controller.goToResetPassword(verificationCode);
               }, // end onSubmit
             ),
           ],

@@ -1,7 +1,9 @@
-// ignore_for_file: prefer_const_constructors, file_names
+// ignore_for_file: prefer_const_constructors, file_names, prefer_typing_uninitialized_variables, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+
+import 'core/functions/checkinternet.dart';
 
 class TestPackage extends StatefulWidget {
   const TestPackage({Key? key}) : super(key: key);
@@ -11,6 +13,17 @@ class TestPackage extends StatefulWidget {
 }
 
 class _TestPackageState extends State<TestPackage> {
+  var res;
+  intialdata() async{
+    res = await checkInternet();
+    print("=============Result================");
+    print(res);
+  }
+  @override
+  void initState() {
+    intialdata();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

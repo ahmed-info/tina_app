@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/app_color.dart';
 import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/view/myWidget/category/customCategoryItem.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 import 'package:tina/view/myWidget/product/group_product.dart';
 

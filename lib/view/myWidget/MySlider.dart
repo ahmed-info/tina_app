@@ -6,9 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tina/core/constant/app_route.dart';
 import 'package:tina/data/datasource/static/static.dart';
-import 'package:tina/data/model/subCategoryModel.dart';
-import 'package:tina/view/screens/category_details.dart';
-import 'package:tina/view/screens/product/products.dart';
 import 'package:tina/view/myWidget/product/custom_product_item.dart';
 
 class MySlider extends StatefulWidget {
